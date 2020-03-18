@@ -1,7 +1,7 @@
 const express = require('express');
 
 //routes
-const exampleRoute = require('../routes/exampleRoute');
+const tourRoute = require('../routes/tourRoute');
 
 //middlewares
 const error = require('../middlewares/error');
@@ -13,7 +13,7 @@ module.exports = function (app) {
     app.use(express.json());
 
     //register routes
-    app.use('/api/exampleRoute', exampleRoute);
+    app.use('/api/v1/tours', tourRoute);
 
 
     //register route handler for 404 requests

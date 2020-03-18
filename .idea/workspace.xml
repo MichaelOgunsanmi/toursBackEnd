@@ -1,22 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="" />
+    <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/tour/createTour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/tour/deleteTour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/tour/getAllTours.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/tour/getSingleTour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/tour/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/tour/updateTour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/filterRequestQueryObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/methods/exampleMethod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/methods/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/post/examplePost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/post/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/pre/examplePre.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/pre/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/statics/exampleStatic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/statics/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/utils/validateTour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/utils/validateUpdateTour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/tourRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-data/data/tours-simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/dev-data/data/tours-simple.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/exampleRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/exampleRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YyhoxEm91NcuCczZZZF21ivn79" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/tour" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\tours" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\tour" />
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Tours" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -31,6 +84,23 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="st" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="st" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.st" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -42,10 +112,25 @@
       <option name="presentableId" value="Default" />
       <updated>1583920920157</updated>
       <workItem from="1583920925309" duration="2908000" />
+      <workItem from="1584342567097" duration="16144000" />
+      <workItem from="1584521854589" duration="15676000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

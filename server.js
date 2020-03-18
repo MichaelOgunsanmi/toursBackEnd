@@ -2,7 +2,8 @@ const app = require('./app');
 const winston = require('winston');
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = 5000 || process.env.PORT;
+
 
 
 const server = app.listen(PORT, () => {

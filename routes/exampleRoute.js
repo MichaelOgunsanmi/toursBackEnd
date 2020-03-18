@@ -7,7 +7,6 @@ const exampleMiddleware = require('../middlewares/exampleMiddleware');
 const {exampleController} = require('../controllers/exampleController');
 
 
-
 router.get('/endpoint', exampleMiddleware, exampleController);
 
 

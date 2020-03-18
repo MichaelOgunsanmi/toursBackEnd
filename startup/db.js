@@ -2,7 +2,7 @@ const winston = require('winston');
 const mongoose = require('mongoose');
 
 const dbConnection = async () => {
-    const dbLocal = process.env.DB_LOCAL;
+    const dbLocal = "mongodb://localhost/tours" || process.env.DB_LOCAL;
     const dbOnline = process.env.DB_ONLINE;
 
     mongoose.set('useNewUrlParser', true);
