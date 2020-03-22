@@ -2,6 +2,8 @@ const winston = require('winston');
 // require('winston-mongodb');
 // require('express-async-errors');
 
+const server = require('../server');
+
 
 const winstonSetting = (filename) => {
     return {
@@ -33,7 +35,9 @@ const winstonSetting = (filename) => {
 module.exports = function () {
 
     process.on('unhandledRejections', (ex) => {
-        throw(ex)
+        server.close(() => {
+            throw(ex)
+        });
     });
 
     winston.add(

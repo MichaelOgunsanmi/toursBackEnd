@@ -101,7 +101,7 @@ file that requires the logging functionality.
 ### **middlewares**
 - Add middleware necessary for the project e.g authentication.js, maintenance503.js e.t.c. Remember to call next() to 
 allow for continuation of the request-response processing pipeline
-- error.js catches any error in the request-processing pipeline and uses winston to log these errors.
+- globalErrorHandler.jsrorHandler.js catches any globalErrorHandler in the request-processing pipeline and uses winston to log these errors.
 
 
 ### **models**

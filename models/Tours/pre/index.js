@@ -1,7 +1,9 @@
 const examplePre = require('./examplePre');
+const save = require('./save');
 
 
 
 module.exports = {
-    examplePre
+    examplePre,
+    save
 };

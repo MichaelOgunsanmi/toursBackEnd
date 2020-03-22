@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const {exampleStatic} = require('./statics');
 const {exampleMethod} = require('./methods');
-const {examplePre} = require('./pre');
+const {save} = require('./pre');
 const {examplePost} = require('./post');
 const {validateTour, validateUpdateTour} = require('./utils');
 
@@ -13,6 +13,7 @@ const tourSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
+    slug: String,
     duration: {
         type: Number,
         required: [true, 'A tour must have a duration']
@@ -23,14 +24,26 @@ const tourSchema = new mongoose.Schema({
     },
     difficulty: {
         type: String,
-        required: [true, 'A tour must have a difficulty']
+        required: [true, 'A tour must have a difficulty'],
+        enum: {
+            values: ['easy', 'medium', 'Difficult'],
+            message: 'Difficulty must either be easy, medium or difficult'
+        }
     },
     price: {
         type: Number,
         min: 0,
         required: [true, 'A tour must have an associated Price']
     },
-    priceDiscount: Number,
+    priceDiscount: {
+        type: Number,
+        validate: {
+            validator: function (value) {
+                return value < this.price;
+            },
+            message: 'Discount price should be below the regular price'
+        }
+    },
     ratingsAverage: {
         type: Number,
         min: 1,
@@ -57,7 +70,8 @@ const tourSchema = new mongoose.Schema({
     images: [String],
     createdAt: {
         type: Date,
-        default: Date.now()
+        default: Date.now(),
+        select: false
     },
     startDates: [Date]
 });
@@ -66,7 +80,7 @@ tourSchema.statics.exampleStatic = exampleStatic;
 
 tourSchema.methods.exampleMethod = exampleMethod;
 
-tourSchema.pre('examplePre',  examplePre);
+tourSchema.pre('save',  save);
 
 tourSchema.post('examplePost',  examplePost);
 

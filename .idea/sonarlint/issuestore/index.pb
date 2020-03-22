@@ -50,3 +50,17 @@ I
 controllers/tour/index.js,e\8\e8d397ac3e656e5da732c2ed697490ebbdc69f3a
 C
 routes/tourRoute.js,4\7\47efde45291e3e36c49b8c02b2df84100d700d40
+H
+dev-data/data/tours.json,6\6\66e9fa2a20b20311373b2d55c40948db80d9c6e4
+X
+(models/Tours/utils/validateUpdateTour.js,f\e\fe38c67fee6f9109370ebd52545e1ed4033ebceb
+O
+dev-data/data/tours-simple.json,a\9\a9d7ba8f169b4eefb83978ac2d12dc16f292c8c7
+N
+controllers/tour/deleteTour.js,7\0\703a1930f0ac4d1273f0812bb368c4354312fc4e
+P
+ middlewares/exampleMiddleware.js,3\5\352ae95c1137d5d5fef7508e8e5c1de39211a84e
+D
+middlewares/index.js,6\d\6db999c7bbf7a8fea3cf10335d309e0caa492700
+W
+'middlewares/filterRequestQueryObject.js,6\7\6742fd43e1febf1e975301d47f0d2a6490248445

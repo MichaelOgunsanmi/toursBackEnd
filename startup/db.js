@@ -1,6 +1,8 @@
 const winston = require('winston');
 const mongoose = require('mongoose');
 
+const server = require('../server');
+
 const dbConnection = async () => {
     const dbLocal = "mongodb://localhost/tours" || process.env.DB_LOCAL;
     const dbOnline = process.env.DB_ONLINE;
@@ -20,7 +22,9 @@ const dbConnection = async () => {
         }
     } catch (error) {
         winston.info(error.message);
-        process.exit(1);
+        server.close(() => {
+            process.exit(1);
+        });
     }
 };
 

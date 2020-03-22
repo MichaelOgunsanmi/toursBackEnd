@@ -3,27 +3,34 @@ const router = express.Router();
 
 const {
     exampleMiddleware,
-    filterRequestQueryObject
+    filterRequestQueryObject,
+    filterForTop5RatedTours,
+    doesTourExist
 } = require('../middlewares');
 
 
 const {
     getSingleTourController,
     getAllToursController,
+    getTourStats,
+    getMonthlyPlan,
     createTourController,
     updateTourController,
     deleteTourController
 } = require('../controllers/tour');
 
-
-router.get('/:id', getSingleTourController);
+router.get('/top-5-cheap', filterForTop5RatedTours, getAllToursController);
+router.get('/tour-stats', getTourStats);
+router.get('/monthly-plan/:year', getMonthlyPlan);
+router.get('/:id', doesTourExist, getSingleTourController);
 router.get('/', filterRequestQueryObject, getAllToursController);
+
 
 router.post('/', createTourController);
 
-router.patch('/:id', updateTourController);
+router.patch('/:id', doesTourExist, updateTourController);
 
-router.delete('/:id', deleteTourController);
+router.delete('/:id', doesTourExist ,deleteTourController);
 
 
 module.exports = router;

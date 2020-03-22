@@ -2,9 +2,10 @@ const express = require('express');
 
 //routes
 const tourRoute = require('../routes/tourRoute');
+const error404Route = require('../routes/error404Route');
 
 //middlewares
-const error = require('../middlewares/error');
+const globalErrorHandler = require('../middlewares/globalErrorHandler');
 
 
 
@@ -17,5 +18,8 @@ module.exports = function (app) {
 
 
     //register route handler for 404 requests
-    app.use(error);
+    app.use(error404Route);
+
+    //Catches all errors and handles them
+    app.use(globalErrorHandler);
 };
