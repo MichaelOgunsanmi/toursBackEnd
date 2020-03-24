@@ -85,7 +85,7 @@ tourSchema.pre('save',  save);
 tourSchema.post('examplePost',  examplePost);
 
 
-const Tour = mongoose.model('user', tourSchema);
+const Tour = mongoose.model('tour', tourSchema);
 
 
 module.exports = {

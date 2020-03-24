@@ -19,18 +19,24 @@ const {
     deleteTourController
 } = require('../controllers/tour');
 
+
 router.get('/top-5-cheap', filterForTop5RatedTours, getAllToursController);
 router.get('/tour-stats', getTourStats);
 router.get('/monthly-plan/:year', getMonthlyPlan);
-router.get('/:id', doesTourExist, getSingleTourController);
-router.get('/', filterRequestQueryObject, getAllToursController);
+
+router
+    .route('/:id')
+    .get(doesTourExist, getSingleTourController)
+    .delete(doesTourExist ,deleteTourController)
+    .patch(doesTourExist, updateTourController);
+
+router
+    .route('/')
+    .get(filterRequestQueryObject, getAllToursController)
+    .post(createTourController);
 
 
-router.post('/', createTourController);
 
-router.patch('/:id', doesTourExist, updateTourController);
-
-router.delete('/:id', doesTourExist ,deleteTourController);
 
 
 module.exports = router;

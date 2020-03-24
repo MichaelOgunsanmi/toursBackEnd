@@ -2,38 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/tour/getMonthlyPlan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/tour/getTourStats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/asyncWrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/filterForTop5RatedTours.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/globalErrorHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/tour/doesTourExist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/tour/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Tours/pre/save.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/error404Route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/5689225b7f9a41aaa84b3fe461b95982b054e4a6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/5689225b7f9a41aaa84b3fe461b95982b054e4a6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdeeee93e5b1f734427d78d0401374f30e171ddb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdeeee93e5b1f734427d78d0401374f30e171ddb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/auth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/auth/signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/methods/exampleMethod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/methods/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/post/examplePost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/post/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/pre/examplePre.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/pre/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/statics/exampleStatic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/statics/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/utils/validateUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/tour/createTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/createTour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/tour/deleteTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/deleteTour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/tour/getAllTours.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/getAllTours.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/tour/getSingleTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/getSingleTour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/tour/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/tour/updateTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/updateTour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-data/templates/errorTemplate.pug" beforeDir="false" afterPath="$PROJECT_DIR$/dev-data/templates/errorTemplate.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/filterRequestQueryObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/filterRequestQueryObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Tours/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/pre/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/tourRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/tourRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/logging.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/logging.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,17 +44,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/tour" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/auth" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\tour" />
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Tours" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\tours" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\auth" />
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Users" />
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\tour" />
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Tours" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -114,7 +101,9 @@
       <workItem from="1583920925309" duration="2908000" />
       <workItem from="1584342567097" duration="16144000" />
       <workItem from="1584521854589" duration="16269000" />
-      <workItem from="1584621278661" duration="35902000" />
+      <workItem from="1584621278661" duration="36355000" />
+      <workItem from="1584978903149" duration="7967000" />
+      <workItem from="1585082446246" duration="171000" />
     </task>
     <servers />
   </component>
