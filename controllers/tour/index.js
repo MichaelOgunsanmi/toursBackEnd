@@ -1,7 +1,7 @@
 const getAllToursController = require('./getAllTours');
 const getSingleTourController = require('./getSingleTour');
-const getTourStats = require('./getTourStats');
-const getMonthlyPlan = require('./getMonthlyPlan');
+const getTourStatsController = require('./getTourStats');
+const getMonthlyPlanController = require('./getMonthlyPlan');
 
 const createTourController = require('./createTour');
 
@@ -14,8 +14,8 @@ const deleteTourController = require('./deleteTour');
 module.exports = {
     getSingleTourController,
     getAllToursController,
-    getTourStats,
-    getMonthlyPlan,
+    getTourStatsController,
+    getMonthlyPlanController,
     createTourController,
     updateTourController,
     deleteTourController

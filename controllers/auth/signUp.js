@@ -1,7 +1,7 @@
 const {User, validateUser} = require('../../models/Users');
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
-const signup = asyncWrapper(async (req, res) => {
+const signUp = asyncWrapper(async (req, res) => {
     const {error} = validateUser(req.body);
 
     if (error) return res.status(400).json({
@@ -16,12 +16,17 @@ const signup = asyncWrapper(async (req, res) => {
         message: 'User already created'
     });
 
-    const newUser = new User(req.body);
+    const {name, email, password, confirmPassword} = req.body;
+
+    const newUser = new User({name, email, password, confirmPassword});
+
+    const token = newUser.generateAuthToken();
 
     const createdUser = await newUser.save();
 
     res.status(201).json({
-        status: 201,
+        status: "success",
+        token,
         data: {
             user: createdUser
         }
@@ -29,4 +34,4 @@ const signup = asyncWrapper(async (req, res) => {
 
 });
 
-module.exports = signup;
+module.exports = signUp;

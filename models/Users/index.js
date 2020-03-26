@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 
-const {exampleStatic} = require('./statics');
-const {exampleMethod} = require('./methods');
-const {examplePre} = require('./pre');
+const {
+    findByEmail,
+    findByCredentials
+} = require('./statics');
+const {
+    toJSON,
+    generateAuthToken
+} = require('./methods');
+const {save} = require('./pre');
 const {examplePost} = require('./post');
 const {validateUser} = require('./utils');
 
@@ -24,7 +30,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Password field is required'],
         trim: true,
-        minlength: 8
+        minlength: 8,
+        select: false
     },
     confirmPassword: {
         type: String,
@@ -36,17 +43,22 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-userSchema.statics.exampleStatic = exampleStatic;
+userSchema.statics = {
+    findByEmail,
+    findByCredentials
+};
 
-userSchema.methods.exampleMethod = exampleMethod;
+userSchema.methods = {
+    toJSON,
+    generateAuthToken
+};
 
-userSchema.pre('examplePre',  examplePre);
+userSchema.pre('save',  save);
 
 userSchema.post('examplePost',  examplePost);
 
 
 const User = mongoose.model('user', userSchema);
-
 
 module.exports = {
     User,

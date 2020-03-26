@@ -7,11 +7,17 @@ const {
 
 
 const {
-    signup
+    signUpController,
+    loginController
 } = require('../controllers/auth');
 
+const {
+    getAllUsersController
+} = require('../controllers/user');
 
-router.post('/signup', signup);
+
+router.post('/signup', signUpController);
+router.post('/login', loginController);
 
 
 // router
@@ -20,10 +26,10 @@ router.post('/signup', signup);
 //     .delete(doesTourExist ,deleteTourController)
 //     .patch(doesTourExist, updateTourController);
 //
-// router
-//     .route('/')
-//     .get(filterRequestQueryObject, getAllToursController)
-//     .post(createTourController);
+router
+    .route('/')
+    .get(getAllUsersController)
+    // .post(createTourController);
 
 
 module.exports = router;

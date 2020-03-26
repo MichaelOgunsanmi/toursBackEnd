@@ -1,7 +1,9 @@
-const exampleMethod= require('./exampleMethod');
+const toJSON = require('./toJSON');
+const generateAuthToken = require('./generateAuthToken');
 
 
 
 module.exports = {
-    exampleMethod
+    toJSON,
+    generateAuthToken
 };

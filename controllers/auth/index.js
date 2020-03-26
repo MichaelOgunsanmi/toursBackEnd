@@ -1,7 +1,9 @@
-const signup = require('./signup');
+const signUpController = require('./signUp');
+const loginController = require('./login');
 
 
 
 module.exports = {
-    signup
+    signUpController,
+    loginController
 };

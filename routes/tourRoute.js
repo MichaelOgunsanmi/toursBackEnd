@@ -12,8 +12,8 @@ const {
 const {
     getSingleTourController,
     getAllToursController,
-    getTourStats,
-    getMonthlyPlan,
+    getTourStatsController,
+    getMonthlyPlanController,
     createTourController,
     updateTourController,
     deleteTourController
@@ -21,8 +21,8 @@ const {
 
 
 router.get('/top-5-cheap', filterForTop5RatedTours, getAllToursController);
-router.get('/tour-stats', getTourStats);
-router.get('/monthly-plan/:year', getMonthlyPlan);
+router.get('/tour-stats', getTourStatsController);
+router.get('/monthly-plan/:year', getMonthlyPlanController);
 
 router
     .route('/:id')

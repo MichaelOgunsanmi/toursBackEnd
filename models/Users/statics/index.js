@@ -1,7 +1,9 @@
-const exampleStatic = require('./exampleStatic');
+const findByEmail = require('./findByEmail');
+const findByCredentials = require('./findByCredentials');
 
 
 
 module.exports = {
-    exampleStatic
+    findByEmail,
+    findByCredentials
 };

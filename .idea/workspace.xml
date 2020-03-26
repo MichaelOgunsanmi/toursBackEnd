@@ -2,24 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/auth/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/auth/signup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/methods/exampleMethod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/methods/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/post/examplePost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/post/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/pre/examplePre.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/pre/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/statics/exampleStatic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/statics/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Users/utils/validateUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/auth/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/user/getAllUsers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/user/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/methods/generateAuthToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/methods/toJSON.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/pre/save.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/statics/findByCredentials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/statics/findByEmail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/auth/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/signUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/tour/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/methods/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/methods/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/statics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/statics/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/tourRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/tourRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,19 +46,20 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/user" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\tours" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\user" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\auth" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Users" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\tour" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Tours" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\tours" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -103,7 +106,7 @@
       <workItem from="1584521854589" duration="16269000" />
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
-      <workItem from="1585082446246" duration="171000" />
+      <workItem from="1585082446246" duration="21552000" />
     </task>
     <servers />
   </component>
