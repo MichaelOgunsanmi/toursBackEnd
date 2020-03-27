@@ -7,7 +7,8 @@ const validateUser = (user) => {
         photo: Joi.string(),
         password: Joi.string().pattern(/^[a-zA-Z0-9]{3,30}$/).required(),
         confirmPassword: Joi.ref("password"),
-        passwordChangeDate: Joi.date()
+        passwordChangeDate: Joi.date(),
+        role: Joi.string().pattern(/^admin$|^guide$|^lead-guide$|^user$/)
     });
 
     return schema.validate(user);

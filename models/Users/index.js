@@ -31,6 +31,11 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     photo: String,
+    role: {
+        type: String,
+        enum: ['user', 'guide', 'lead-guide', 'admin'],
+        default: 'user'
+    },
     password: {
         type: String,
         required: [true, 'Password field is required'],

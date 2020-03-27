@@ -38,8 +38,6 @@ const authenticateUser = asyncWrapper(async (req, res, next) => {
         message: "User has been deleted"
     });
 
-    console.log(user, user.passwordChangeDate, decoded.iat, decoded)
-
     if (user.passwordWasChangedAfter(decoded.iat))next({
         statusCode: 401,
         status: 'fail',

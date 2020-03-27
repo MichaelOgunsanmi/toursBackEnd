@@ -5,7 +5,9 @@ const {
     exampleMiddleware,
     filterRequestQueryObject,
     filterForTop5RatedTours,
-    doesTourExist
+    doesTourExist,
+    authenticateUser,
+    authorizeUser
 } = require('../middlewares');
 
 
@@ -27,7 +29,7 @@ router.get('/monthly-plan/:year', getMonthlyPlanController);
 router
     .route('/:id')
     .get(doesTourExist, getSingleTourController)
-    .delete(doesTourExist ,deleteTourController)
+    .delete(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist ,deleteTourController)
     .patch(doesTourExist, updateTourController);
 
 router

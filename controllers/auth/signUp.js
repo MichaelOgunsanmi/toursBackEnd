@@ -7,7 +7,7 @@ const signUp = asyncWrapper(async (req, res, next) => {
     if (error) return next({
         statusCode: 400,
         status: "fail",
-        message: error
+        message: 'Invalid details provided'
     });
 
     const findUser = await User.findOne({email: req.body.email});
@@ -20,7 +20,7 @@ const signUp = asyncWrapper(async (req, res, next) => {
 
     const {name, email, password, confirmPassword} = req.body;
 
-    const newUser = new User({name, email, password, confirmPassword});
+    const newUser = new User(req.body);
 
     const token = newUser.generateAuthToken();
 
