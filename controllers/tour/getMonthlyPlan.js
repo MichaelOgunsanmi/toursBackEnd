@@ -41,7 +41,7 @@ const getMonthlyPlans = asyncWrapper( async (req, res) => {
 
 
     res.status(200).json({
-        status: 200,
+        status: 'success',
         results: plan.length,
         data: {
             plan

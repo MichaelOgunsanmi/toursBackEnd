@@ -1,12 +1,13 @@
 const {User} = require('../../models/Users');
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
-const login = asyncWrapper(async (req, res) => {
+const login = asyncWrapper(async (req, res, next) => {
     const { email, password } = req.body;
 
     const user = await User.findByCredentials(email, password);
 
-    if (!user) return res.status(401).json({
+    if (!user) return next({
+        statusCode: 401,
         status: 'fail',
         message: "Login Failed"
     });

@@ -26,7 +26,7 @@ const getTourStats = asyncWrapper( async (req, res) => {
     ]);
 
     res.status(200).json({
-        status: 200,
+        status: 'success',
         results: tourStats.length,
         data: {
             tourStats

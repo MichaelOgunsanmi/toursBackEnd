@@ -3,18 +3,20 @@ const {Tour, validateUpdateTour} = require('../../models/Tours');
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 
-const updateTour = asyncWrapper(async (req, res) => {
+const updateTour = asyncWrapper(async (req, res, next) => {
     const {error} = validateUpdateTour(req.body);
 
-    if (error) return res.status(400).json({
-        status: 400,
+    if (error) return next({
+        statusCode: 400,
+        status: 'fail',
         message: error.details[0].message
     });
 
     const doesUpdateNameExists = await Tour.find({name: req.body.name});
 
-    if (doesUpdateNameExists.length > 0) return res.status(400).json({
-        status: 400,
+    if (doesUpdateNameExists.length > 0) return next({
+        statusCode: 400,
+        status: 'fail',
         message: "Name already exist"
     });
 
@@ -25,7 +27,7 @@ const updateTour = asyncWrapper(async (req, res) => {
     });
 
     res.status(200).json({
-        status: 200,
+        status: 'success',
         data: {
             tour
         }

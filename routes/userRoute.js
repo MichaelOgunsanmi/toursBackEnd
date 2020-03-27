@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    exampleMiddleware
+    authenticateUser
 } = require('../middlewares');
 
 
@@ -28,7 +28,7 @@ router.post('/login', loginController);
 //
 router
     .route('/')
-    .get(getAllUsersController)
+    .get(authenticateUser, getAllUsersController)
     // .post(createTourController);
 
 

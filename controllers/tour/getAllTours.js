@@ -3,16 +3,15 @@ const {Tour} = require('../../models/Tours');
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 
-const getAllTours = asyncWrapper( async (req, res) => {
+const getAllTours = asyncWrapper( async (req, res, next) => {
     console.log( req.query, req.queryParams, req.sortBy, req.select);
 
-    if (req.query.page && req.skip >= await Tour.countDocuments()) {
-        throw {
+    if (req.query.page && req.skip >= await Tour.countDocuments()) return next({
             statusCode: 404,
-            status: 'success',
+            status: 'fail',
             message:'This page does not exist'
-        };
-    }
+        });
+
 
     const tours = await Tour
         .find(req.queryParams)
@@ -22,7 +21,7 @@ const getAllTours = asyncWrapper( async (req, res) => {
         .limit(req.limit);
 
     res.status(200).json({
-        status: 200,
+        status: 'success',
         results: tours.length,
         data: {
             tours

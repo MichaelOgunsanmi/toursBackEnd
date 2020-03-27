@@ -4,12 +4,17 @@ const {
     findByEmail,
     findByCredentials
 } = require('./statics');
+
 const {
     toJSON,
-    generateAuthToken
+    generateAuthToken,
+    passwordWasChangedAfter
 } = require('./methods');
+
 const {save} = require('./pre');
+
 const {examplePost} = require('./post');
+
 const {validateUser} = require('./utils');
 
 const userSchema = new mongoose.Schema({
@@ -40,7 +45,8 @@ const userSchema = new mongoose.Schema({
             validator: function (value) {return value === this.password},
             message: "Passwords are not the same"
         }
-    }
+    },
+    passwordChangeDate: Date
 });
 
 userSchema.statics = {
@@ -50,7 +56,8 @@ userSchema.statics = {
 
 userSchema.methods = {
     toJSON,
-    generateAuthToken
+    generateAuthToken,
+    passwordWasChangedAfter
 };
 
 userSchema.pre('save',  save);

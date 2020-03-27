@@ -1,18 +1,20 @@
 const {User, validateUser} = require('../../models/Users');
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
-const signUp = asyncWrapper(async (req, res) => {
+const signUp = asyncWrapper(async (req, res, next) => {
     const {error} = validateUser(req.body);
 
-    if (error) return res.status(400).json({
-        status: 400,
+    if (error) return next({
+        statusCode: 400,
+        status: "fail",
         message: error
     });
 
     const findUser = await User.findOne({email: req.body.email});
 
-    if (findUser) return res.status(400).json({
-        status: 400,
+    if (findUser) return next({
+        statusCode: 400,
+        status: 'fail',
         message: 'User already created'
     });
 

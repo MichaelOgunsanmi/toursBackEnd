@@ -8,7 +8,7 @@ const getSingleTours = asyncWrapper( async (req, res) => {
     const tour = await Tour.findById(req.params.id);
 
     res.status(200).json({
-        status: 200,
+        status: 'success',
         data: {
             tour
         }
