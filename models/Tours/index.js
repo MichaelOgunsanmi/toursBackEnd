@@ -4,7 +4,7 @@ const {exampleStatic} = require('./statics');
 const {exampleMethod} = require('./methods');
 const {save} = require('./pre');
 const {examplePost} = require('./post');
-const {validateTour, validateUpdateTour} = require('./utils');
+const {validateTour, validateTourInputsFromUser} = require('./utils');
 
 const tourSchema = new mongoose.Schema({
     name: {
@@ -91,6 +91,6 @@ const Tour = mongoose.model('tour', tourSchema);
 module.exports = {
     Tour,
     validateTour,
-    validateUpdateTour
+    validateTourInputsFromUser
 };
 

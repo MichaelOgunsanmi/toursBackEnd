@@ -7,7 +7,7 @@ const signUp = asyncWrapper(async (req, res, next) => {
     if (error) return next({
         statusCode: 400,
         status: "fail",
-        message: 'Invalid details provided'
+        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error
     });
 
     const findUser = await User.findOne({email: req.body.email});

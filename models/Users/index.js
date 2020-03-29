@@ -8,14 +8,18 @@ const {
 const {
     toJSON,
     generateAuthToken,
-    passwordWasChangedAfter
+    passwordWasChangedAfter,
+    generatePasswordResetToken
 } = require('./methods');
 
 const {save} = require('./pre');
 
 const {examplePost} = require('./post');
 
-const {validateUser} = require('./utils');
+const {
+    validateUser,
+    validateUserInputsFromUser
+} = require('./utils');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -51,7 +55,9 @@ const userSchema = new mongoose.Schema({
             message: "Passwords are not the same"
         }
     },
-    passwordChangeDate: Date
+    passwordChangeDate: Date,
+    passwordResetToken: String,
+    passwordResetExpiresAt: Date
 });
 
 userSchema.statics = {
@@ -62,7 +68,8 @@ userSchema.statics = {
 userSchema.methods = {
     toJSON,
     generateAuthToken,
-    passwordWasChangedAfter
+    passwordWasChangedAfter,
+    generatePasswordResetToken
 };
 
 userSchema.pre('save',  save);
@@ -74,6 +81,7 @@ const User = mongoose.model('user', userSchema);
 
 module.exports = {
     User,
-    validateUser
+    validateUser,
+    validateUserInputsFromUser
 };
 

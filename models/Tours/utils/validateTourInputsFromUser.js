@@ -1,6 +1,6 @@
 const Joi = require('@hapi/joi');
 
-const validateUpdateTour = (tour) => {
+const validateTourInputsFromUser = (tour) => {
     const schema = Joi.object().keys({
         name: Joi.string().min(2).max(50),
         duration: Joi.number().min(0),
@@ -21,4 +21,4 @@ const validateUpdateTour = (tour) => {
     return schema.validate(tour);
 };
 
-module.exports = validateUpdateTour;
+module.exports = validateTourInputsFromUser;

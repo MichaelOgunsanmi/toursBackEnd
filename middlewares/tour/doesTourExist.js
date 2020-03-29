@@ -11,6 +11,9 @@ const doesTourExist = asyncWrapper(async (req, res, next) => {
         status: 'fail',
         message: "Tour doesn't exist"
     });
+
+    req.tour = findTour;
+
     next();
 });
 

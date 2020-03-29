@@ -1,9 +1,9 @@
 const validateTour = require('./validateTour');
-const validateUpdateTour = require('./validateUpdateTour');
+const validateTourInputsFromUser = require('./validateTourInputsFromUser');
 
 
 
 module.exports = {
     validateTour,
-    validateUpdateTour
+    validateTourInputsFromUser
 };

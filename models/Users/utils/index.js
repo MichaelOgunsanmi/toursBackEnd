@@ -1,7 +1,9 @@
 const validateUser = require('./validateUser');
+const validateUserInputsFromUser = require('./validateUserInputsFromUser');
 
 
 
 module.exports = {
-    validateUser
+    validateUser,
+    validateUserInputsFromUser
 };

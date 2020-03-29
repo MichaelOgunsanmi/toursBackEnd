@@ -1,15 +1,15 @@
-const {Tour, validateUpdateTour} = require('../../models/Tours');
+const {Tour, validateTourInputsFromUser} = require('../../models/Tours');
 
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 
 const updateTour = asyncWrapper(async (req, res, next) => {
-    const {error} = validateUpdateTour(req.body);
+    const {error} = validateTourInputsFromUser(req.body);
 
     if (error) return next({
         statusCode: 400,
         status: 'fail',
-        message: error.details[0].message
+        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error
     });
 
     const doesUpdateNameExists = await Tour.find({name: req.body.name});

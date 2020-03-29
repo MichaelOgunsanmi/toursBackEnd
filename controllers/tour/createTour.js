@@ -8,7 +8,7 @@ const createTour = asyncWrapper( async (req, res) => {
 
     if (error) return res.status(400).json({
         status: 400,
-        message: error
+        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error
     });
 
     const findTour = await Tour.findOne({name: req.body.name});

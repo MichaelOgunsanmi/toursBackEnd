@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    authenticateUser
+    authenticateUser,
+    doesUserExist
 } = require('../middlewares');
 
 
@@ -12,12 +13,17 @@ const {
 } = require('../controllers/auth');
 
 const {
-    getAllUsersController
+    getAllUsersController,
+    forgotPasswordController,
+    resetPasswordController
 } = require('../controllers/user');
 
 
 router.post('/signup', signUpController);
 router.post('/login', loginController);
+
+router.post('/forgotPassword', doesUserExist, forgotPasswordController);
+router.patch('/resetPassword/:token', resetPasswordController);
 
 
 // router
@@ -28,7 +34,7 @@ router.post('/login', loginController);
 //
 router
     .route('/')
-    .get(authenticateUser, getAllUsersController)
+    .get(authenticateUser, getAllUsersController);
     // .post(createTourController);
 
 
