@@ -7,7 +7,10 @@ const {doesTourExist} = require('./tour');
 
 const {authenticateUser, authorizeUser} = require('./auth');
 
-const {doesUserExist} = require('./user');
+const {
+    validateUserRequestBody,
+    doesUserExist
+} = require('./user');
 
 const exampleMiddleware = require('./exampleMiddleware');
 
@@ -17,6 +20,7 @@ module.exports = {
     filterRequestQueryObject,
     filterForTop5RatedTours,
     error,
+    validateUserRequestBody,
     doesTourExist,
     authenticateUser,
     authorizeUser,

@@ -1,7 +1,9 @@
-const save = require('./save');
+const hashPasswordPreSave = require('./hashPasswordPreSave');
+const setPasswordChangeDatePreSave = require('./setPasswordChangeDatePreSave');
 
 
 
 module.exports = {
-    save
+    hashPasswordPreSave,
+    setPasswordChangeDatePreSave
 };

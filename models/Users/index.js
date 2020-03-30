@@ -12,7 +12,10 @@ const {
     generatePasswordResetToken
 } = require('./methods');
 
-const {save} = require('./pre');
+const {
+    hashPasswordPreSave,
+    setPasswordChangeDatePreSave
+} = require('./pre');
 
 const {examplePost} = require('./post');
 
@@ -72,7 +75,9 @@ userSchema.methods = {
     generatePasswordResetToken
 };
 
-userSchema.pre('save',  save);
+userSchema.pre('save',  setPasswordChangeDatePreSave);
+userSchema.pre('save',  hashPasswordPreSave);
+
 
 userSchema.post('examplePost',  examplePost);
 

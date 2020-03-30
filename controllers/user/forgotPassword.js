@@ -9,7 +9,7 @@ const forgotPassword = asyncWrapper( async (req, res, next) => {
     await req.user.save({validateBeforeSave: false});
 
     const passwordResetUrl = `${req.protocol}://${req.get('host')}/api/v1/users/resetPassword/${passwordResetToken}`;
-    
+
     try {
         await sendForgotPasswordEmail(req.user, passwordResetUrl);
 

@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 
-const save = async function (next) {
+const hashPasswordPreSave = async function (next) {
     const user = this;
 
     if (!user.isModified('password')) return next();
@@ -12,4 +12,4 @@ const save = async function (next) {
     next();
 };
 
-module.exports = save;
+module.exports = hashPasswordPreSave;

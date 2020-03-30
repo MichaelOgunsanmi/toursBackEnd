@@ -3,6 +3,7 @@ const router = express.Router();
 
 const {
     authenticateUser,
+    validateUserRequestBody,
     doesUserExist
 } = require('../middlewares');
 
@@ -20,10 +21,10 @@ const {
 
 
 router.post('/signup', signUpController);
-router.post('/login', loginController);
+router.post('/login', validateUserRequestBody, loginController);
 
-router.post('/forgotPassword', doesUserExist, forgotPasswordController);
-router.patch('/resetPassword/:token', resetPasswordController);
+router.post('/forgotPassword', validateUserRequestBody, doesUserExist, forgotPasswordController);
+router.patch('/resetPassword/:token', validateUserRequestBody, resetPasswordController);
 
 
 // router

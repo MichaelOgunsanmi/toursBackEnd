@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/middlewares/auth/authenticateUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/auth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/user/validateUserRequestBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/pre/setPasswordChangeDatePreSave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdeeee93e5b1f734427d78d0401374f30e171ddb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdeeee93e5b1f734427d78d0401374f30e171ddb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe38c67fee6f9109370ebd52545e1ed4033ebceb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/globalErrorHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/globalErrorHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user/forgotPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user/forgotPassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user/resetPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user/resetPassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-data/public/img/icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dev-data/public/img/icons.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/user/doesUserExist.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/user/doesUserExist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/pre/save.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/hashPasswordPreSave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/utils/validateUserInputsFromUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/utils/validateUserInputsFromUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,17 +43,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/middlewares/user" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\middlewares\user" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\user" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\auth" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Users" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\tour" />
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Tours" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\tours" />
@@ -92,7 +103,8 @@
       <workItem from="1584521854589" duration="16269000" />
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
-      <workItem from="1585082446246" duration="29696000" />
+      <workItem from="1585082446246" duration="56147000" />
+      <workItem from="1585582926164" duration="9515000" />
     </task>
     <servers />
   </component>
