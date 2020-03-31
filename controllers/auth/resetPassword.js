@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 
 const {User} = require('../../models/Users');
+const {setJWTCookie} = require('../../cookies');
 
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
@@ -40,6 +41,8 @@ const resetPassword = asyncWrapper( async (req, res, next) => {
     await user.save();
 
     const token = user.generateAuthToken();
+
+    setJWTCookie(token, res);
 
     res.status(200).json({
         status: 'success',
