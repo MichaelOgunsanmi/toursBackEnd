@@ -14,7 +14,8 @@ const {
 
 const {
     hashPasswordPreSave,
-    setPasswordChangeDatePreSave
+    setPasswordChangeDatePreSave,
+    findOnlyActiveUsers
 } = require('./pre');
 
 const {examplePost} = require('./post');
@@ -60,7 +61,12 @@ const userSchema = new mongoose.Schema({
     },
     passwordChangeDate: Date,
     passwordResetToken: String,
-    passwordResetExpiresAt: Date
+    passwordResetExpiresAt: Date,
+    active: {
+        type: Boolean,
+        default: true,
+        select: false
+    }
 });
 
 userSchema.statics = {
@@ -75,8 +81,10 @@ userSchema.methods = {
     generatePasswordResetToken
 };
 
+userSchema.pre(/^find/,  findOnlyActiveUsers);
 userSchema.pre('save',  setPasswordChangeDatePreSave);
 userSchema.pre('save',  hashPasswordPreSave);
+
 
 
 userSchema.post('examplePost',  examplePost);

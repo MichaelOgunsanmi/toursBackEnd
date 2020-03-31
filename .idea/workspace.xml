@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/user/updateUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/filterObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/user/deleteUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Users/pre/findOnlyActiveUsers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Users/statics/findByCredentials.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/statics/findByCredentials.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/auth/authenticateUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth/authenticateUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,7 +96,7 @@
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
-      <workItem from="1585582926164" duration="17004000" />
+      <workItem from="1585582926164" duration="20050000" />
     </task>
     <servers />
   </component>

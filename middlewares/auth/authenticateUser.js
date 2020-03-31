@@ -32,13 +32,13 @@ const authenticateUser = asyncWrapper(async (req, res, next) => {
     }
 
     const user = await User.findOne({_id: decoded._id});
-    if (!user) next({
+    if (!user) return next({
         statusCode: 401,
         status: 'fail',
         message: "User has been deleted"
     });
 
-    if (user.passwordWasChangedAfter(decoded.iat))next({
+    if (user.passwordWasChangedAfter(decoded.iat)) return next({
         statusCode: 401,
         status: 'fail',
         message: "User's password has been changed, Login Again"
