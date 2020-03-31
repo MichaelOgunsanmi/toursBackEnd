@@ -6,6 +6,7 @@ const validateUserInputsFromUser = (user) => {
         email: Joi.string().email({ minDomainSegments: 2 } ),
         photo: Joi.string(),
         password: Joi.string().pattern(/^[a-zA-Z0-9]{8,30}$/),
+        oldPassword: Joi.string().pattern(/^[a-zA-Z0-9]{8,30}$/),
         confirmPassword: Joi.ref("password"),
         passwordChangeDate: Joi.date(),
         role: Joi.string().pattern(/^admin$|^guide$|^lead-guide$|^user$/),

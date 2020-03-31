@@ -10,20 +10,21 @@ const {
 
 const {
     signUpController,
-    loginController
+    loginController,
+    forgotPasswordController,
+    resetPasswordController,
+    updatePasswordController
 } = require('../controllers/auth');
 
 const {
     getAllUsersController,
-    forgotPasswordController,
-    resetPasswordController
 } = require('../controllers/user');
 
 
 router.post('/signup', signUpController);
 router.post('/login', validateUserRequestBody, loginController);
-
 router.post('/forgotPassword', validateUserRequestBody, doesUserExist, forgotPasswordController);
+router.patch('/updateMyPassword', authenticateUser, validateUserRequestBody, updatePasswordController);
 router.patch('/resetPassword/:token', validateUserRequestBody, resetPasswordController);
 
 
