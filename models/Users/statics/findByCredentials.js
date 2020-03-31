@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 
-const findByEmail = async function (email, password) {
+const findByCredentials = async function (email, password) {
     const User = this;
 
     const user = await User.findByEmail(email);
@@ -14,4 +14,4 @@ const findByEmail = async function (email, password) {
    return user;
 };
 
-module.exports = findByEmail;
+module.exports = findByCredentials;

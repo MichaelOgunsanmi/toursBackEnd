@@ -18,6 +18,7 @@ const {
 
 const {
     getAllUsersController,
+    updateUserController
 } = require('../controllers/user');
 
 
@@ -26,7 +27,7 @@ router.post('/login', validateUserRequestBody, loginController);
 router.post('/forgotPassword', validateUserRequestBody, doesUserExist, forgotPasswordController);
 router.patch('/updateMyPassword', authenticateUser, validateUserRequestBody, updatePasswordController);
 router.patch('/resetPassword/:token', validateUserRequestBody, resetPasswordController);
-
+router.patch('/updateMe', authenticateUser, validateUserRequestBody, updateUserController);
 
 // router
 //     .route('/:id')
@@ -37,7 +38,7 @@ router.patch('/resetPassword/:token', validateUserRequestBody, resetPasswordCont
 router
     .route('/')
     .get(authenticateUser, getAllUsersController);
-    // .post(createTourController);
+
 
 
 module.exports = router;
