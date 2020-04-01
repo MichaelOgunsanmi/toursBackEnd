@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cookies/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookies/setJWTCookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/convertDaysToMilliSeconds.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/convertMinutesToMilliSeconds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/rateLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startup/security.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/convertHoursToMilliSeconds.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/auth/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/auth/resetPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/resetPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/auth/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/signUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/auth/updatePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/updatePassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Users/methods/generatePasswordResetToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/methods/generatePasswordResetToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
-      <workItem from="1585582926164" duration="23374000" />
+      <workItem from="1585582926164" duration="29973000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,7 @@
 const express = require('express');
+const mongoSanitize = require('express-mongo-sanitize');
+const xss = require('xss-clean');
+const hpp = require('hpp');
 
 //routes
 const tourRoute = require('../routes/tourRoute');
@@ -6,13 +9,28 @@ const userRoute = require('../routes/userRoute');
 const error404Route = require('../routes/error404Route');
 
 //middlewares
-const globalErrorHandler = require('../middlewares/globalErrorHandler');
+const {
+    globalErrorHandler,
+    limiter
+} = require('../middlewares');
 
 
 
 module.exports = function (app) {
     //register middlewares for parse incoming requests
-    app.use(express.json());
+    app.use('/api', limiter);
+    app.use(express.json({ limit: '10kb' }));
+    app.use(mongoSanitize());
+    app.use(xss());
+    app.use(hpp({
+        whitelist: [
+            'duration',
+            'ratingsAverage',
+            'ratingsQuantity',
+            'maxGroupSize',
+            'difficulty',
+            'price'
+        ]}));
 
     //register routes
     app.use('/api/v1/tours', tourRoute);

@@ -2,6 +2,9 @@ const filterRequestQueryObject = require('./filterRequestQueryObject');
 const filterForTop5RatedTours = require('./filterForTop5RatedTours');
 
 const error = require('./globalErrorHandler');
+const globalErrorHandler = require('./globalErrorHandler');
+
+const limiter = require('./rateLimit');
 
 const {doesTourExist} = require('./tour');
 
@@ -19,11 +22,12 @@ const exampleMiddleware = require('./exampleMiddleware');
 module.exports = {
     filterRequestQueryObject,
     filterForTop5RatedTours,
-    error,
+    globalErrorHandler,
     validateUserRequestBody,
     doesTourExist,
     authenticateUser,
     authorizeUser,
     doesUserExist,
+    limiter,
     exampleMiddleware
 };
