@@ -6,6 +6,7 @@ const hpp = require('hpp');
 //routes
 const tourRoute = require('../routes/tourRoute');
 const userRoute = require('../routes/userRoute');
+const reviewRoute = require('../routes/reviewRoute');
 const error404Route = require('../routes/error404Route');
 
 //middlewares
@@ -35,6 +36,7 @@ module.exports = function (app) {
     //register routes
     app.use('/api/v1/tours', tourRoute);
     app.use('/api/v1/users', userRoute);
+    app.use('/api/v1/reviews', reviewRoute);
 
 
     //register route handler for 404 requests

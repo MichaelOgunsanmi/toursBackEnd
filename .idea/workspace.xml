@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/Tours/pre/getGuideUserDetailsPreSave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Tours/pre/populateGuidesUserDetailsPreFind.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/review/createReview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/review/getAllReviews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/review/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/methods/exampleMethod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/methods/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/methods/toJSON.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/post/examplePost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/post/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/examplePre.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/statics/exampleStatic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/statics/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/utils/validateExample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/reviewRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-data/data/tours.json" beforeDir="false" afterPath="$PROJECT_DIR$/dev-data/data/tours.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Tours/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/pre/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Tours/pre/save.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/pre/slugifyTourNamePreSave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Tours/utils/validateTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/utils/validateTour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Tours/utils/validateTourInputsFromUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/utils/validateTourInputsFromUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Users/pre/findOnlyActiveUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/findOnlyActiveUsersPreSave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Users/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/middlewares/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models/Reviews/methods" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
@@ -49,11 +54,11 @@
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\tours" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Reviews\methods" />
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Reviews" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\middlewares\user" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\user" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\auth" />
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Users" />
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\tour" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -101,7 +106,7 @@
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
-      <workItem from="1585582926164" duration="39019000" />
+      <workItem from="1585582926164" duration="42631000" />
     </task>
     <servers />
   </component>
