@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 
 const {exampleStatic} = require('./statics');
 const {exampleMethod} = require('./methods');
-const {save} = require('./pre');
+const {
+    slugifyTourNamePreSave,
+    populateGuidesUserDetailsPreFind
+} = require('./pre');
 const {examplePost} = require('./post');
 const {validateTour, validateTourInputsFromUser} = require('./utils');
 
@@ -26,7 +29,7 @@ const tourSchema = new mongoose.Schema({
         type: String,
         required: [true, 'A tour must have a difficulty'],
         enum: {
-            values: ['easy', 'medium', 'Difficult'],
+            values: ['easy', 'medium', 'difficult'],
             message: 'Difficulty must either be easy, medium or difficult'
         }
     },
@@ -73,14 +76,44 @@ const tourSchema = new mongoose.Schema({
         default: Date.now(),
         select: false
     },
-    startDates: [Date]
+    startDates: [Date],
+    startLocation: {
+        type: {
+            type: String,
+            default: 'Point',
+            enum: ['Point']
+        },
+        coordinates: [Number],
+        address: String,
+        description: String
+    },
+    locations: [
+        {
+            type: {
+                type: String,
+                default: 'Point',
+                enum: ['Point']
+            },
+            coordinates: [Number],
+            address: String,
+            description: String,
+            day: Number
+        }
+    ],
+    guides: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'user'
+        }
+    ]
 });
 
 tourSchema.statics.exampleStatic = exampleStatic;
 
 tourSchema.methods.exampleMethod = exampleMethod;
 
-tourSchema.pre('save',  save);
+tourSchema.pre('save',  slugifyTourNamePreSave);
+tourSchema.pre(/^find/, populateGuidesUserDetailsPreFind);
 
 tourSchema.post('examplePost',  examplePost);
 

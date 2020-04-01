@@ -15,7 +15,22 @@ const validateTour = (tour) => {
         imageCover: Joi.string().min(2).required(),
         images: Joi.array().items(Joi.string()),
         createdAt: Joi.date(),
-        startDates: Joi.array().items(Joi.date())
+        startDates: Joi.array().items(Joi.date()),
+        startLocation: Joi.object().keys({
+            type: Joi.string(),
+            coordinates: Joi.array().items(Joi.number()),
+            address: Joi.string(),
+            description: Joi.string()
+        }),
+        locations: Joi.array().items(Joi.object().keys({
+                type: Joi.string(),
+                coordinates: Joi.array().items(Joi.number()),
+                address: Joi.string(),
+                description: Joi.string(),
+                day: Joi.number()
+            })
+        ),
+        guides: Joi.array()
     });
 
     return schema.validate(tour);

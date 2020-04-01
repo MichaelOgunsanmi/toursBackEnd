@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/middlewares/rateLimit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/startup/security.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/convertHoursToMilliSeconds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/pre/getGuideUserDetailsPreSave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/pre/populateGuidesUserDetailsPreFind.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-data/data/tours.json" beforeDir="false" afterPath="$PROJECT_DIR$/dev-data/data/tours.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/pre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/pre/save.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/pre/slugifyTourNamePreSave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/utils/validateTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/utils/validateTour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/utils/validateTourInputsFromUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/utils/validateTourInputsFromUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/pre/findOnlyActiveUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/findOnlyActiveUsersPreSave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/pre/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +101,7 @@
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
-      <workItem from="1585582926164" duration="29973000" />
+      <workItem from="1585582926164" duration="39019000" />
     </task>
     <servers />
   </component>

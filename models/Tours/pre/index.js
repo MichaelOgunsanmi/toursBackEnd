@@ -1,9 +1,12 @@
 const examplePre = require('./examplePre');
-const save = require('./save');
-
+const slugifyTourNamePreSave = require('./slugifyTourNamePreSave');
+const getGuideUserDetailsPreSave = require('./getGuideUserDetailsPreSave');
+const populateGuidesUserDetailsPreFind = require('./populateGuidesUserDetailsPreFind');
 
 
 module.exports = {
     examplePre,
-    save
+    slugifyTourNamePreSave,
+    getGuideUserDetailsPreSave,
+    populateGuidesUserDetailsPreFind
 };

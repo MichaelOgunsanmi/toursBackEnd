@@ -15,7 +15,7 @@ const {
 const {
     hashPasswordPreSave,
     setPasswordChangeDatePreSave,
-    findOnlyActiveUsers
+    findOnlyActiveUsersPreSave
 } = require('./pre');
 
 const {examplePost} = require('./post');
@@ -81,7 +81,7 @@ userSchema.methods = {
     generatePasswordResetToken
 };
 
-userSchema.pre(/^find/,  findOnlyActiveUsers);
+userSchema.pre(/^find/,  findOnlyActiveUsersPreSave);
 userSchema.pre('save',  setPasswordChangeDatePreSave);
 userSchema.pre('save',  hashPasswordPreSave);
 

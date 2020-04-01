@@ -1,6 +1,6 @@
 const slugify = require('slugify');
 
-const save = function (next) {
+const slugifyTourNamePreSave = function (next) {
     const tour = this;
 
     tour.slug = slugify(tour.name, { lower: true });
@@ -8,4 +8,4 @@ const save = function (next) {
     next();
 };
 
-module.exports = save;
+module.exports = slugifyTourNamePreSave;

@@ -1,7 +1,6 @@
 const filterRequestQueryObject = require('./filterRequestQueryObject');
 const filterForTop5RatedTours = require('./filterForTop5RatedTours');
 
-const error = require('./globalErrorHandler');
 const globalErrorHandler = require('./globalErrorHandler');
 
 const limiter = require('./rateLimit');

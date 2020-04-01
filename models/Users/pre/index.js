@@ -1,10 +1,10 @@
 const hashPasswordPreSave = require('./hashPasswordPreSave');
 const setPasswordChangeDatePreSave = require('./setPasswordChangeDatePreSave');
-const findOnlyActiveUsers = require('./findOnlyActiveUsers');
+const findOnlyActiveUsersPreSave = require('./findOnlyActiveUsersPreSave');
 
 
 module.exports = {
     hashPasswordPreSave,
     setPasswordChangeDatePreSave,
-    findOnlyActiveUsers
+    findOnlyActiveUsersPreSave
 };
