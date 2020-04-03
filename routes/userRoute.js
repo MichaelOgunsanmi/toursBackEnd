@@ -3,6 +3,7 @@ const router = express.Router();
 
 const {
     authenticateUser,
+    authorizeUser,
     validateUserRequestBody,
     doesUserExist
 } = require('../middlewares');
@@ -19,7 +20,8 @@ const {
 const {
     getAllUsersController,
     updateUserController,
-    deleteUserController
+    deleteUserController,
+    adminDeleteUserController
 } = require('../controllers/user');
 
 
@@ -32,12 +34,11 @@ router.patch('/updateMe', authenticateUser, validateUserRequestBody, updateUserC
 router.delete('/deleteMe', authenticateUser, deleteUserController);
 
 
-// router
-//     .route('/:id')
-//     .get(doesTourExist, getSingleTourController)
-//     .delete(doesTourExist ,deleteTourController)
-//     .patch(doesTourExist, updateTourController);
-//
+router
+    .route('/:id')
+    .delete(authenticateUser, authorizeUser('admin'), adminDeleteUserController);
+
+
 router
     .route('/')
     .get(authenticateUser, getAllUsersController);

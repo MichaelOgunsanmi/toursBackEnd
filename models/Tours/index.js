@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+const {
+    reviewVirtualRelationship
+} = require('./virtual');
 const {exampleStatic} = require('./statics');
 const {exampleMethod} = require('./methods');
 const {
@@ -106,7 +109,15 @@ const tourSchema = new mongoose.Schema({
             ref: 'user'
         }
     ]
+},
+{
+    toJSON: {virtuals: true},
+    toObject: {virtuals: true},
 });
+
+tourSchema.virtual('reviews', reviewVirtualRelationship);
+
+
 
 tourSchema.statics.exampleStatic = exampleStatic;
 

@@ -4,6 +4,8 @@ const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 
 const createReview = asyncWrapper( async (req, res) => {
+    if (!req.body.user) req.body.user = req.user;
+    if (!req.body.tour) req.body.tour = req.params.tourId;
 
     const newReview = new Review(req.body);
 

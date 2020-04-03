@@ -21,6 +21,10 @@ const {
     deleteTourController
 } = require('../controllers/tour');
 
+const reviewRouter = require('./reviewRoute');
+
+router.use('/:tourId/reviews', reviewRouter);
+
 
 router.get('/top-5-cheap', filterForTop5RatedTours, getAllToursController);
 router.get('/tour-stats', getTourStatsController);
@@ -28,7 +32,7 @@ router.get('/monthly-plan/:year', getMonthlyPlanController);
 
 router
     .route('/:id')
-    .get(doesTourExist, getSingleTourController)
+    .get(getSingleTourController)
     .delete(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist ,deleteTourController)
     .patch(doesTourExist, updateTourController);
 

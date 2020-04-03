@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 
 const {exampleStatic} = require('./statics');
 const {toJSON} = require('./methods');
-const {examplePre} = require('./pre');
+const {
+    populateUserDetailsPreFind,
+} = require('./pre');
 const {examplePost} = require('./post');
 const {validateExample} = require('./utils');
 
@@ -41,7 +43,7 @@ reviewSchema.methods = {
     toJSON
 };
 
-reviewSchema.pre('examplePre',  examplePre);
+reviewSchema.pre(/^find/,  populateUserDetailsPreFind);
 
 reviewSchema.post('examplePost',  examplePost);
 

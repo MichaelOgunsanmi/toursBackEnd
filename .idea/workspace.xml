@@ -2,24 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/review/createReview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/review/getAllReviews.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/review/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/methods/exampleMethod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/methods/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/methods/toJSON.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/post/examplePost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/post/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/examplePre.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/statics/exampleStatic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/statics/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/utils/validateExample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/reviewRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/review/deleteReview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/user/adminDeleteUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/populateTourDetailsPreFind.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/populateUserDetailsPreFind.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/virtual/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Tours/virtual/reviewVirtualRelationship.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/review/createReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/review/createReview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/review/getAllReviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/review/getAllReviews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/review/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/review/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/tour/deleteTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/deleteTour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/tour/getSingleTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/getSingleTour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/pre/examplePre.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/pre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/reviewRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/reviewRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/tourRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/tourRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +52,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Tours" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\auth" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\tours" />
     </key>
@@ -106,7 +109,7 @@
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
-      <workItem from="1585582926164" duration="42631000" />
+      <workItem from="1585582926164" duration="52848000" />
     </task>
     <servers />
   </component>

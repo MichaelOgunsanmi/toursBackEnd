@@ -1,19 +1,28 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router({ mergeParams: true});
 
-const exampleMiddleware = require('../middlewares/exampleMiddleware');
+const {
+    authenticateUser,
+    authorizeUser
+} = require('../middlewares/auth');
 
 
 const {
     getAllReviewsController,
-    createReviewController
+    createReviewController,
+    deleteReviewController
 } = require('../controllers/review');
+
 
 
 router
     .route('/')
     .get(getAllReviewsController)
-    .post(createReviewController);
+    .post(authenticateUser, authorizeUser('user'), createReviewController);
+
+router
+    .route('/:id')
+    .delete(authenticateUser, authorizeUser('user'), deleteReviewController);
 
 
 module.exports = router;

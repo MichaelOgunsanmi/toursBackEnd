@@ -1,7 +1,9 @@
-const examplePre = require('./examplePre');
+const populateTourDetailsPreFind = require('./populateTourDetailsPreFind');
+const populateUserDetailsPreFind = require('./populateUserDetailsPreFind');
 
 
 
 module.exports = {
-    examplePre
+    populateTourDetailsPreFind,
+    populateUserDetailsPreFind
 };
