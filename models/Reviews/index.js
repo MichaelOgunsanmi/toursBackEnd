@@ -6,7 +6,10 @@ const {
     populateUserDetailsPreFind,
 } = require('./pre');
 const {examplePost} = require('./post');
-const {validateExample} = require('./utils');
+const {
+    validateReview,
+    validateReviewInputsFromUser
+} = require('./utils');
 
 const reviewSchema = new mongoose.Schema({
     review: {
@@ -53,6 +56,7 @@ const Review = mongoose.model('review', reviewSchema);
 
 module.exports = {
     Review,
-    validateExample
+    validateReview,
+    validateReviewInputsFromUser
 };
 

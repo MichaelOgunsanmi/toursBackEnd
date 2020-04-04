@@ -10,19 +10,21 @@ const {
 const {
     getAllReviewsController,
     createReviewController,
+    updateReviewController,
     deleteReviewController
 } = require('../controllers/review');
 
-
+router
+    .route('/:id')
+    .patch(authenticateUser, authorizeUser('user'), updateReviewController)
+    .delete(authenticateUser, authorizeUser('user'), deleteReviewController);
 
 router
     .route('/')
     .get(getAllReviewsController)
     .post(authenticateUser, authorizeUser('user'), createReviewController);
 
-router
-    .route('/:id')
-    .delete(authenticateUser, authorizeUser('user'), deleteReviewController);
+
 
 
 module.exports = router;

@@ -4,7 +4,9 @@ const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 
 const deleteReview = asyncWrapper( async (req, res, next) => {
-    const review = await Review.findByIdAndDelete(req.params.id);
+    const tour = req.params.tourId || req.body.tour;
+
+    const review = await Review.findOneAndDelete({_id: req.params.id, tour, user: req.user._id});
 
     if (!review) return next({
         statusCode: 404,

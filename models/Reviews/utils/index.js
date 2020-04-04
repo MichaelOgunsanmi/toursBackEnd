@@ -1,7 +1,9 @@
-const validateExample = require('./validateExample');
+const validateReview = require('./validateReview');
+const validateReviewInputsFromUser = require('./validateReviewInputsFromUser');
 
 
 
 module.exports = {
-    validateExample
+    validateReview,
+    validateReviewInputsFromUser
 };
