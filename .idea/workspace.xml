@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/reviewRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/reviewRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/tour/getAllTours.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/getAllTours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-data/data/tours-simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/dev-data/data/tours-simple.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-data/data/tours.json" beforeDir="false" afterPath="$PROJECT_DIR$/dev-data/data/tours.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/utils/validateReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/utils/validateReview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/utils/validateReviewInputsFromUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/utils/validateReviewInputsFromUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/tourRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/tourRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +99,7 @@
       <workItem from="1584621278661" duration="36355000" />
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
-      <workItem from="1585582926164" duration="70495000" />
+      <workItem from="1585582926164" duration="75535000" />
     </task>
     <servers />
   </component>

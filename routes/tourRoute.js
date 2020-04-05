@@ -35,7 +35,6 @@ router
     .patch(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist, updateTourController)
     .delete(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist ,deleteTourController);
 
-
 router
     .route('/')
     .get(filterRequestQueryObject, getAllToursController)
