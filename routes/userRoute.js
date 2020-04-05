@@ -5,7 +5,8 @@ const {
     authenticateUser,
     authorizeUser,
     validateUserRequestBody,
-    doesUserExist
+    doesUserExist,
+    filterRequestQueryObject
 } = require('../middlewares');
 
 
@@ -43,7 +44,7 @@ router
 
 router
     .route('/')
-    .get(authenticateUser, getAllUsersController);
+    .get(filterRequestQueryObject, authenticateUser, getAllUsersController);
 
 
 
