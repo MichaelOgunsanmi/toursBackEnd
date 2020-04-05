@@ -28,25 +28,28 @@ const {
 } = require('../controllers/user');
 
 
-router.get('/me', authenticateUser, getCurrentUser, getSingleUserController);
 router.post('/signup', signUpController);
 router.post('/login', validateUserRequestBody, loginController);
 router.post('/forgotPassword', validateUserRequestBody, doesUserExist, forgotPasswordController);
-router.patch('/updateMyPassword', authenticateUser, validateUserRequestBody, updatePasswordController);
 router.patch('/resetPassword/:token', validateUserRequestBody, resetPasswordController);
-router.patch('/updateMe', authenticateUser, validateUserRequestBody, updateUserController);
-router.delete('/deleteMe', authenticateUser, deleteUserController);
 
+router.use(authenticateUser);
+
+router.patch('/updateMyPassword', validateUserRequestBody, updatePasswordController);
+router.get('/me', getCurrentUser, getSingleUserController);
+router.patch('/updateMe', validateUserRequestBody, updateUserController);
+router.delete('/deleteMe', deleteUserController);
+
+router.use(authorizeUser('admin'));
 
 router
     .route('/:id')
     .get(getSingleUserController)
-    .delete(authenticateUser, authorizeUser('admin'), adminDeleteUserController);
-
+    .delete(adminDeleteUserController);
 
 router
     .route('/')
-    .get(filterRequestQueryObject, authenticateUser, getAllUsersController);
+    .get(filterRequestQueryObject, getAllUsersController);
 
 
 

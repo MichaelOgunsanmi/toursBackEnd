@@ -16,16 +16,18 @@ const {
     deleteReviewController
 } = require('../controllers/review');
 
+router.use(authenticateUser);
+
 router
     .route('/:id')
     .get(getSingleReviewController)
-    .patch(authenticateUser, authorizeUser('user'), updateReviewController)
-    .delete(authenticateUser, authorizeUser('user'), deleteReviewController);
+    .patch(authorizeUser('user', 'admin'), updateReviewController)
+    .delete(authorizeUser('user', 'admin'), deleteReviewController);
 
 router
     .route('/')
     .get(filterRequestQueryObject, getAllReviewsController)
-    .post(authenticateUser, authorizeUser('user'), createReviewController);
+    .post(authorizeUser('user'), createReviewController);
 
 
 

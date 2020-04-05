@@ -22,24 +22,24 @@ const {
 } = require('../controllers/tour');
 
 const reviewRouter = require('./reviewRoute');
-
 router.use('/:tourId/reviews', reviewRouter);
 
 
 router.get('/top-5-cheap', filterForTop5RatedTours, getAllToursController);
 router.get('/tour-stats', getTourStatsController);
-router.get('/monthly-plan/:year', getMonthlyPlanController);
+router.get('/monthly-plan/:year', authenticateUser, authorizeUser('admin', 'lead-guide', 'guide'), getMonthlyPlanController);
 
 router
     .route('/:id')
     .get(getSingleTourController)
-    .delete(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist ,deleteTourController)
-    .patch(doesTourExist, updateTourController);
+    .patch(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist, updateTourController)
+    .delete(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist ,deleteTourController);
+
 
 router
     .route('/')
     .get(filterRequestQueryObject, getAllToursController)
-    .post(createTourController);
+    .post(authenticateUser, authorizeUser('admin', 'lead-guide'), createTourController);
 
 
 
