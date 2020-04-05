@@ -11,7 +11,8 @@ const {authenticateUser, authorizeUser} = require('./auth');
 
 const {
     validateUserRequestBody,
-    doesUserExist
+    doesUserExist,
+    getCurrentUser
 } = require('./user');
 
 const exampleMiddleware = require('./exampleMiddleware');
@@ -27,6 +28,7 @@ module.exports = {
     authenticateUser,
     authorizeUser,
     doesUserExist,
+    getCurrentUser,
     limiter,
     exampleMiddleware
 };

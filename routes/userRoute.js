@@ -6,6 +6,7 @@ const {
     authorizeUser,
     validateUserRequestBody,
     doesUserExist,
+    getCurrentUser,
     filterRequestQueryObject
 } = require('../middlewares');
 
@@ -27,6 +28,7 @@ const {
 } = require('../controllers/user');
 
 
+router.get('/me', authenticateUser, getCurrentUser, getSingleUserController);
 router.post('/signup', signUpController);
 router.post('/login', validateUserRequestBody, loginController);
 router.post('/forgotPassword', validateUserRequestBody, doesUserExist, forgotPasswordController);
