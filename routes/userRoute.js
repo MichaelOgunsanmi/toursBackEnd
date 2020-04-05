@@ -18,6 +18,7 @@ const {
 } = require('../controllers/auth');
 
 const {
+    getSingleUserController,
     getAllUsersController,
     updateUserController,
     deleteUserController,
@@ -36,6 +37,7 @@ router.delete('/deleteMe', authenticateUser, deleteUserController);
 
 router
     .route('/:id')
+    .get(getSingleUserController)
     .delete(authenticateUser, authorizeUser('admin'), adminDeleteUserController);
 
 

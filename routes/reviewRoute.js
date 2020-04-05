@@ -3,11 +3,13 @@ const router = express.Router({ mergeParams: true});
 
 const {
     authenticateUser,
-    authorizeUser
-} = require('../middlewares/auth');
+    authorizeUser,
+    filterRequestQueryObject
+} = require('../middlewares');
 
 
 const {
+    getSingleReviewController,
     getAllReviewsController,
     createReviewController,
     updateReviewController,
@@ -16,12 +18,13 @@ const {
 
 router
     .route('/:id')
+    .get(getSingleReviewController)
     .patch(authenticateUser, authorizeUser('user'), updateReviewController)
     .delete(authenticateUser, authorizeUser('user'), deleteReviewController);
 
 router
     .route('/')
-    .get(getAllReviewsController)
+    .get(filterRequestQueryObject, getAllReviewsController)
     .post(authenticateUser, authorizeUser('user'), createReviewController);
 
 

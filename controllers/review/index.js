@@ -1,3 +1,4 @@
+const getSingleReviewController = require('./getSingleReview');
 const getAllReviewsController = require('./getAllReviews');
 
 const createReviewController = require('./createReview');
@@ -8,6 +9,7 @@ const deleteReviewController = require('./deleteReview');
 
 
 module.exports = {
+    getSingleReviewController,
     getAllReviewsController,
     createReviewController,
     updateReviewController,
