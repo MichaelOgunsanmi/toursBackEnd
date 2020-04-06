@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node --require dotenv/config server.js",
     "start:dev": "nodemon --require dotenv/config server.js",
-    "st": "nodemon server.js"
+    "st": "nodemon server.js",
+    "beforeStart" : "export NODE_ENV=development"
   },
   "keywords": [],
   "author": "",

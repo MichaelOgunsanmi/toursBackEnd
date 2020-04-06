@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const {exampleStatic} = require('./statics');
+const {computeRatingsAverage} = require('./statics');
 const {toJSON} = require('./methods');
 const {
     populateUserDetailsPreFind,
 } = require('./pre');
-const {examplePost} = require('./post');
+const {computeRatingsAveragePostSave} = require('./post');
 const {
     validateReview,
     validateReviewInputsFromUser
@@ -40,7 +40,9 @@ const reviewSchema = new mongoose.Schema({
    timestamps: true
 });
 
-reviewSchema.statics.exampleStatic = exampleStatic;
+reviewSchema.statics = {
+    computeRatingsAverage
+};
 
 reviewSchema.methods = {
     toJSON
@@ -48,7 +50,7 @@ reviewSchema.methods = {
 
 reviewSchema.pre(/^find/,  populateUserDetailsPreFind);
 
-reviewSchema.post('examplePost',  examplePost);
+reviewSchema.post('save',  computeRatingsAveragePostSave);
 
 
 const Review = mongoose.model('review', reviewSchema);

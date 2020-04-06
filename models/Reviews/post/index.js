@@ -1,7 +1,7 @@
-const examplePost = require('./examplePost');
+const computeRatingsAveragePostSave = require('./computeRatingsAveragePostSave');
 
 
 
 module.exports = {
-    examplePost
+    computeRatingsAveragePostSave
 };
