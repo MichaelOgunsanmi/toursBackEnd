@@ -15,6 +15,14 @@ const createReview = asyncWrapper( async (req, res, next) => {
         message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error
     });
 
+    const reviewAlreadyWrittenForTour = await Review.findOne({user: req.body.user, tour: req.body.tour});
+
+    if (reviewAlreadyWrittenForTour) return next({
+        statusCode: 403,
+        status: 'fail',
+        message: 'You have already created a review for this tour. Update/Delete the previously written review to continue'
+    });
+
     const newReview = new Review(req.body);
 
     const review = await newReview.save();

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/Reviews/post/computeRatingsAveragePostFindOneAndModify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/getReviewDocumentPreFindOneAndModify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/review/createReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/review/createReview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Reviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/post/computeRatingsAveragePostSave.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/post/computeRatingsAveragePostSave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/post/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/post/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/pre/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/statics/computeRatingsAverage.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/statics/computeRatingsAverage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +95,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="5953000" />
+      <workItem from="1586191637488" duration="7922000" />
     </task>
     <servers />
   </component>
