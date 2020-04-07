@@ -3,9 +3,13 @@ const mongoose = require('mongoose');
 const {computeRatingsAverage} = require('./statics');
 const {toJSON} = require('./methods');
 const {
-    populateUserDetailsPreFind,
+    getReviewDocumentPreFindOneAndModify,
+    populateUserDetailsPreFind
 } = require('./pre');
-const {computeRatingsAveragePostSave} = require('./post');
+const {
+    computeRatingsAveragePostFindOneAndModify,
+    computeRatingsAveragePostSave
+} = require('./post');
 const {
     validateReview,
     validateReviewInputsFromUser
@@ -49,8 +53,10 @@ reviewSchema.methods = {
 };
 
 reviewSchema.pre(/^find/,  populateUserDetailsPreFind);
+reviewSchema.pre(/^findOneAnd/, getReviewDocumentPreFindOneAndModify);
 
 reviewSchema.post('save',  computeRatingsAveragePostSave);
+reviewSchema.post(/^findOneAnd/, computeRatingsAveragePostFindOneAndModify);
 
 
 const Review = mongoose.model('review', reviewSchema);

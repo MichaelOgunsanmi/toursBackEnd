@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/7474502525943e26a58740fca86b38252b33ccca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/8227d10673c992b90385798a5c1f09143b7c4312" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/8227d10673c992b90385798a5c1f09143b7c4312" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88deb8c1006ee6cd72a4f61e9fbe77285e60857b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc423e94b4104da2097b049708940194def01a51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/post/computeRatingsAveragePostFindOneAndModify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Reviews/pre/getReviewDocumentPreFindOneAndModify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Reviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/post/examplePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/post/computeRatingsAveragePostSave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/post/computeRatingsAveragePostSave.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/post/computeRatingsAveragePostSave.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Reviews/post/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/post/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/statics/exampleStatic.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/statics/computeRatingsAverage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/statics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/statics/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/pre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Reviews/statics/computeRatingsAverage.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/statics/computeRatingsAverage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +99,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="2869000" />
+      <workItem from="1586191637488" duration="5953000" />
     </task>
     <servers />
   </component>

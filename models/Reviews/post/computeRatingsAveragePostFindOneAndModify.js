@@ -1,7 +1,7 @@
 
 const computeRatingsAveragePostSave = async function () {
-    const Review = this.constructor;
-    const tourId = this.tour;
+    const Review = this.review.constructor;
+    const tourId = this.review.tour;
 
     await Review.computeRatingsAverage(tourId);
 };

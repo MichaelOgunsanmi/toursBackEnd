@@ -15,10 +15,19 @@ const computeRatingsAverage = async function (tourId) {
         }
     ]);
 
+    let ratingsQuantity = 0;
+    let ratingsAverage = 4.5;
+
+    if (ratingsStatistics.length > 0){
+        ratingsQuantity = ratingsStatistics[0].ratingsQuantity;
+        ratingsAverage = ratingsStatistics[0].ratingsAverage
+    }
+
     await Tour.findByIdAndUpdate(tourId, {
-        ratingsQuantity: ratingsStatistics[0].ratingsQuantity,
-        ratingsAverage: ratingsStatistics[0].ratingsAverage
+        ratingsQuantity,
+        ratingsAverage
     })
+
 };
 
 module.exports = computeRatingsAverage;
