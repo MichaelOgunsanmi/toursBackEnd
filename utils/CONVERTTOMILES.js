@@ -1,0 +1,3 @@
+const CONVERTTOMILES = 0.000621371;
+
+module.exports = CONVERTTOMILES;

@@ -1,0 +1,3 @@
+const CONVERTTOKILOMETERS = 0.001;
+
+module.exports = CONVERTTOKILOMETERS;
