@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const {convertMinutesToMilliSeconds} = require('../../../utils')
+const {CONVERTMINUTESTOMILLISECONDS} = require('../../../utils');
 
 
 const generatePasswordResetToken = function (){
@@ -15,7 +15,7 @@ const generatePasswordResetToken = function (){
 
     const minutesBeforeResetTokenExpires = 10;
 
-    user.passwordResetExpiresAt = Date.now() + (minutesBeforeResetTokenExpires * convertMinutesToMilliSeconds);
+    user.passwordResetExpiresAt = Date.now() + (minutesBeforeResetTokenExpires * CONVERTMINUTESTOMILLISECONDS);
 
     return passwordResetToken;
 };

@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/tour/getToursWithin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/EARTHRADIUSINKILOMETERS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/EARTHRADIUSINMILES.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/review/createReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/review/createReview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Reviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Reviews/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/tour/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/setJWTCookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/setJWTCookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/rateLimit.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/rateLimit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Tours/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Tours/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Users/methods/generatePasswordResetToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/methods/generatePasswordResetToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/tourRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/tourRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/convertDaysToMilliSeconds.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/CONVERTDAYSTOMILLISECONDS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/convertHoursToMilliSeconds.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/CONVERTHOURSTOMILLISECONDS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/convertMinutesToMilliSeconds.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/CONVERTMINUTESTOMILLISECONDS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +105,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="7922000" />
+      <workItem from="1586191637488" duration="12525000" />
     </task>
     <servers />
   </component>

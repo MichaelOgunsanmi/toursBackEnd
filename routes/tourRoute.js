@@ -16,6 +16,7 @@ const {
     getAllToursController,
     getTourStatsController,
     getMonthlyPlanController,
+    getToursWithin,
     createTourController,
     updateTourController,
     deleteTourController
@@ -28,6 +29,7 @@ router.use('/:tourId/reviews', reviewRouter);
 router.get('/top-5-cheap', filterForTop5RatedTours, getAllToursController);
 router.get('/tour-stats', getTourStatsController);
 router.get('/monthly-plan/:year', authenticateUser, authorizeUser('admin', 'lead-guide', 'guide'), getMonthlyPlanController);
+router.get('/tours-within/:radius/center/:latitudeLongitude/unit/:unit', getToursWithin);
 
 router
     .route('/:id')

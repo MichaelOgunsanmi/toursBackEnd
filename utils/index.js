@@ -1,12 +1,16 @@
 const filterObject = require('./filterObject');
-const convertMinutesToMilliSeconds = require('./convertMinutesToMilliSeconds');
-const convertHoursToMilliSeconds = require('./convertHoursToMilliSeconds');
-const convertDaysToMilliSeconds = require('./convertDaysToMilliSeconds');
+const CONVERTMINUTESTOMILLISECONDS = require('./CONVERTMINUTESTOMILLISECONDS');
+const CONVERTHOURSTOMILLISECONDS = require('./CONVERTHOURSTOMILLISECONDS');
+const CONVERTDAYSTOMILLISECONDS = require('./CONVERTDAYSTOMILLISECONDS');
+const EARTHRADIUSINKILOMETERS = require('./EARTHRADIUSINKILOMETERS');
+const EARTHRADIUSINMILES = require('./EARTHRADIUSINMILES');
 
 
 module.exports = {
     filterObject,
-    convertMinutesToMilliSeconds,
-    convertHoursToMilliSeconds,
-    convertDaysToMilliSeconds,
+    CONVERTMINUTESTOMILLISECONDS,
+    CONVERTHOURSTOMILLISECONDS,
+    CONVERTDAYSTOMILLISECONDS,
+    EARTHRADIUSINKILOMETERS,
+    EARTHRADIUSINMILES
 };

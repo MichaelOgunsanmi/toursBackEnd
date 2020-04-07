@@ -1,8 +1,8 @@
 const rateLimit = require('express-rate-limit');
-const {convertHoursToMilliSeconds} = require('../utils');
+const {CONVERTHOURSTOMILLISECONDS} = require('../utils');
 
 const maximumAllowedHour = 1;
-const allowedTimePeriodInMilliSeconds = maximumAllowedHour * convertHoursToMilliSeconds;
+const allowedTimePeriodInMilliSeconds = maximumAllowedHour * CONVERTHOURSTOMILLISECONDS;
 
 const maxAllowedRequestsPerIP = 100;
 

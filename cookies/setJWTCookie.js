@@ -1,9 +1,9 @@
-const {convertDaysToMilliSeconds} = require('../utils');
+const {CONVERTDAYSTOMILLISECONDS} = require('../utils');
 
 const setJWTCookie = (token, res) => {
     const cookieOptions = {
         expires: new Date(
-            Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * convertDaysToMilliSeconds
+            Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * CONVERTDAYSTOMILLISECONDS
         ),
         httpOnly: true
     };
