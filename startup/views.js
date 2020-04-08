@@ -12,7 +12,20 @@ module.exports = function (app) {
     app.use(express.static(pathToPublicDirectory));
 
     app.get('/base', (req, res, next) => {
-        console.log('i hot here')
-        res.status(200).render('base')
-    })
+        res.status(200).render('base', {
+            title: 'Exciting tours for adventurous people'
+        })
+    });
+
+    app.get('/overview', (req, res, next) => {
+        res.status(200).render('overview', {
+            title: 'All Tours'
+        })
+    });
+
+    app.get('/tour', (req, res, next) => {
+        res.status(200).render('tour', {
+            title: 'The Forest Hiker'
+        })
+    });
 };

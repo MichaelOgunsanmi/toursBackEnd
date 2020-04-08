@@ -6,22 +6,11 @@ html(lang='en')
         link(rel='shortcut icon' type='image/png' href='images/favicon.png')
         link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
         link(rel='stylesheet' href='css/style.css')
-        title Tours | Exciting tours for adventurous people
+        title Tours | #{title}
     body
-        
+        include _header
 
+        block content
+            h1 This is the placeholder heading
 
-        main.main
-            h1 tour
-
-
-        footer.footer
-            .footer__logo
-                img(src='images/logo-green.png' alt='Tours logo')
-            ul.footer__nav
-                li: a(href='#') About us
-                li: a(href='#') Download apps
-                li: a(href='#') Become a guide
-                li: a(href='#') Careers
-                li: a(href='#') Contact
-            p.footer__copyright &copy; by Michael Ogunsanmi. All rights reserved.
+        include _footer
