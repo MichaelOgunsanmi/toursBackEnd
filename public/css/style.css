@@ -552,7 +552,7 @@ body {
 }
 
 .marker {
-  background-image: url('../img/pin.png');
+  background-image: url('../../dev-data/public/img/pin.png');
   background-size: cover;
   width: 32px;
   height: 40px;
@@ -830,6 +830,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: flex-end;
 }
 .footer__nav li {
   margin-left: 1.5rem;
