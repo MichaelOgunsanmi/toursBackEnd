@@ -7,6 +7,7 @@ const hpp = require('hpp');
 const tourRoute = require('../routes/tourRoute');
 const userRoute = require('../routes/userRoute');
 const reviewRoute = require('../routes/reviewRoute');
+const viewRoute = require('../routes/viewRoute');
 const error404Route = require('../routes/error404Route');
 
 //middlewares
@@ -34,6 +35,7 @@ module.exports = function (app) {
         ]}));
 
     //register routes
+    app.use('/', viewRoute);
     app.use('/api/v1/tours', tourRoute);
     app.use('/api/v1/users', userRoute);
     app.use('/api/v1/reviews', reviewRoute);
