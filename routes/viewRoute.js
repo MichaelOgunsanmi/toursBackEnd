@@ -8,6 +8,7 @@ const {
 
 
 router.get('/', getToursOverviewController);
-router.get('/tour', getSingleTourController);
+router.get('/tour/:tourSlug', getSingleTourController);
+
 
 module.exports = router;

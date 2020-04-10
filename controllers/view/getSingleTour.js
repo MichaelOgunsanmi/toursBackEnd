@@ -1,10 +1,22 @@
+const {Tour} = require('../../models/Tours');
+
+const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 
-const getSingleTour = (req, res, next) => {
+const getSingleTour = asyncWrapper( async(req, res, next) => {
+    const tour = await Tour
+        .findOne({slug: req.params.tourSlug})
+        .populate({
+            path: 'reviews',
+            fields: 'review rating user'
+        });
+
+
     res.status(200).render('tour', {
-        title: 'The Forest Hiker.'
+        title: tour.name,
+        tour
     })
-};
+});
 
 
 module.exports = getSingleTour;
