@@ -11,7 +11,7 @@ const authenticateUser = asyncWrapper(async (req, res, next) => {
         });
     }
 
-    const token = req.header('Authorization').replace('Bearer ', '');
+    const token = req.header('Authorization').replace('Bearer ', '') || req.cookies.jwt;
     let decoded;
     let jwtKey;
 

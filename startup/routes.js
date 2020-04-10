@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
@@ -22,6 +23,7 @@ module.exports = function (app) {
     //register middlewares for parse incoming requests
     app.use('/api', limiter);
     app.use(express.json({ limit: '10kb' }));
+    app.use(cookieParser());
     app.use(mongoSanitize());
     app.use(xss());
     app.use(hpp({
