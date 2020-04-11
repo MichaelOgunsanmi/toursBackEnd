@@ -1,6 +1,7 @@
 import '@babel/polyfill'
 import {handleLoginFormSubmit} from './login';
 import {handleLogout} from './logout';
+import {handleUpdateSettingsFormSubmit} from "./updateSettings";
 import {displayMap} from './mapbox';
 
 const mapBox = document.getElementById('map');
@@ -9,7 +10,7 @@ if (mapBox) {
     displayMap(locations);
 }
 
-const form = document.querySelector('.form');
+const form = document.querySelector('.form--login');
 if (form){
     form.addEventListener('submit', handleLoginFormSubmit);
 }
@@ -17,3 +18,10 @@ if (form){
 
 const logoutButton = document.querySelector('.nav__el--logout');
 if (logoutButton) logoutButton.addEventListener('click', handleLogout);
+
+
+const updateUserButton = document.querySelector('.form-user-data');
+if (updateUserButton) updateUserButton.addEventListener('submit', handleUpdateSettingsFormSubmit);
+
+
+const updatePasswordButton = document.querySelector('.form-user-data');

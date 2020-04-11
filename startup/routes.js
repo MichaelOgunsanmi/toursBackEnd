@@ -23,6 +23,7 @@ module.exports = function (app) {
     //register middlewares for parse incoming requests
     app.use('/api', limiter);
     app.use(express.json({ limit: '10kb' }));
+    app.use(express.urlencoded({limit: '10kb', extended: true}));
     app.use(cookieParser());
     app.use(mongoSanitize());
     app.use(xss());
