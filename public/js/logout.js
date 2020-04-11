@@ -11,7 +11,7 @@ export const handleLogout = async event => {
             url: '/api/v1/users/logout'
         });
 
-        if (response.data.status === 'success') location.reload(true);
+        if (response.data.status === 'success') location.assign('/');
     } catch(error) {
         showAlert('error', 'Error logging out. Try Again.');
     }

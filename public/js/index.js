@@ -2,7 +2,9 @@ import '@babel/polyfill'
 import {handleLoginFormSubmit} from './login';
 import {handleLogout} from './logout';
 import {handleUpdateSettingsFormSubmit} from "./updateSettings";
+import {handlePasswordUpdateFormSubmit} from "./updatePassword";
 import {displayMap} from './mapbox';
+
 
 const mapBox = document.getElementById('map');
 if (mapBox) {
@@ -24,4 +26,5 @@ const updateUserButton = document.querySelector('.form-user-data');
 if (updateUserButton) updateUserButton.addEventListener('submit', handleUpdateSettingsFormSubmit);
 
 
-const updatePasswordButton = document.querySelector('.form-user-data');
+const updatePasswordButton = document.querySelector('.form-user-password');
+if (updatePasswordButton) updatePasswordButton.addEventListener('submit', handlePasswordUpdateFormSubmit);
