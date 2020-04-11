@@ -14,6 +14,7 @@ const {
 const {
     signUpController,
     loginController,
+    logoutController,
     forgotPasswordController,
     resetPasswordController,
     updatePasswordController
@@ -30,6 +31,7 @@ const {
 
 router.post('/signup', signUpController);
 router.post('/login', validateUserRequestBody, loginController);
+router.get('/logout', logoutController);
 router.post('/forgotPassword', validateUserRequestBody, doesUserExist, forgotPasswordController);
 router.patch('/resetPassword/:token', validateUserRequestBody, resetPasswordController);
 
