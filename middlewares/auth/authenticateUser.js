@@ -3,7 +3,7 @@ const {User} = require('../../models/Users');
 const asyncWrapper = require('../asyncWrapper');
 
 const authenticateUser = asyncWrapper(async (req, res, next) => {
-    if (!req.header('Authorization') || !req.header('Authorization').startsWith('Bearer ')){
+    if ((!req.header('Authorization') || !req.header('Authorization').startsWith('Bearer ')) && !req.cookies.jwt){
         return next({
             statusCode: 401,
             status: 'fail',
@@ -11,9 +11,12 @@ const authenticateUser = asyncWrapper(async (req, res, next) => {
         });
     }
 
-    const token = req.header('Authorization').replace('Bearer ', '') || req.cookies.jwt;
+    let token;
     let decoded;
     let jwtKey;
+
+    if (req.header('Authorization')) token = req.header('Authorization').replace('Bearer ', '');
+    else token = req.cookies.jwt;
 
     if (process.env.NODE_ENV === 'development'){
         jwtKey = "testing$In$Development"
@@ -45,6 +48,7 @@ const authenticateUser = asyncWrapper(async (req, res, next) => {
     });
 
     req.user = user;
+    res.locals.user = user;
 
     next();
 });

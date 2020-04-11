@@ -2,18 +2,21 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    userIsLoggedIn
+    userIsLoggedIn,
+    authenticateUser
 } = require('../middlewares/auth');
 
 const {
     loginController,
     getSingleTourController,
-    getToursOverviewController
+    getToursOverviewController,
+    getUserAccountDetailsController
 } = require('../controllers/view');
 
 
-router.use(userIsLoggedIn);
+router.get('/me', authenticateUser, getUserAccountDetailsController);
 
+router.use(userIsLoggedIn);
 router.get('/', getToursOverviewController);
 router.get('/tour/:tourSlug', getSingleTourController);
 router.get('/login', loginController);
