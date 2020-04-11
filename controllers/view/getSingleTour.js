@@ -11,6 +11,11 @@ const getSingleTour = asyncWrapper( async(req, res, next) => {
             fields: 'review rating user'
         });
 
+    if (!tour) return next({
+        statusCode: 404,
+        status: 'fail',
+        message: "There is no tour with that name"
+    });
 
     res.status(200).render('tour', {
         title: `${tour.name} Tour`,

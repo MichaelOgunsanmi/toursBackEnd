@@ -11,10 +11,18 @@ const globalErrorHandler = function (err, req, res, next) {
 
     winston.error(err.message, err);
 
-    res.status(err.statusCode).json({
-        status: err.status,
-        message: err.message
-    });
+    if (req.originalUrl.startsWith('/api')) {
+        res.status(err.statusCode).json({
+            status: err.status,
+            message: err.message
+        });
+    } else {
+        res.status(err.statusCode).render('error', {
+            title: 'Something went wrong',
+            errorMessage: err.message
+        });
+    }
+
 };
 
 module.exports = globalErrorHandler;

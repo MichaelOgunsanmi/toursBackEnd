@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/auth/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/CONVERTSECONDSTOMILLISECONDS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/error.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Users/statics/findByCredentials.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users/statics/findByCredentials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/tour/getSingleTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/getSingleTour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/view/getSingleTour.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/view/getSingleTour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/globalErrorHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/globalErrorHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/_header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_header.pug" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +100,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="60508000" />
+      <workItem from="1586191637488" duration="62909000" />
     </task>
     <servers />
   </component>

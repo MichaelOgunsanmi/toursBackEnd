@@ -1,0 +1,9 @@
+extends base
+
+block content
+    main.main
+        .globalErrorHandler
+            .error__title
+                h2.heading-secondary.heading-secondary--globalErrorHandler Uh oh! Something went wrong!
+                h2.error__emoji 😢 🤯
+            .error__msg= errorMessage
