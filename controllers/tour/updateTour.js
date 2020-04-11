@@ -9,7 +9,7 @@ const updateTour = asyncWrapper(async (req, res, next) => {
     if (error) return next({
         statusCode: 400,
         status: 'fail',
-        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error
+        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error.toString()
     });
 
     const doesUpdateNameExists = await Tour.find({name: req.body.name});

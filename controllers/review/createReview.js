@@ -12,7 +12,7 @@ const createReview = asyncWrapper( async (req, res, next) => {
     if (error || Object.keys(req.body).length < 3) return next({
         statusCode: 400,
         status: 'fail',
-        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error
+        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error.toString()
     });
 
     const reviewAlreadyWrittenForTour = await Review.findOne({user: req.body.user, tour: req.body.tour});

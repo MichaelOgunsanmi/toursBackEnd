@@ -9,7 +9,7 @@ const validateUserRequestBody = asyncWrapper(async (req, res, next) => {
     if (error || Object.keys(req.body).length === 0) return next({
         statusCode: 400,
         status: 'fail',
-        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error
+        message: process.env.NODE_ENV === 'production' ? 'Invalid details provided' : error.toString()
     });
 
 

@@ -8339,7 +8339,30 @@ module.exports.default = axios;
 
 },{"./utils":"../../node_modules/axios/lib/utils.js","./helpers/bind":"../../node_modules/axios/lib/helpers/bind.js","./core/Axios":"../../node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"../../node_modules/axios/lib/core/mergeConfig.js","./defaults":"../../node_modules/axios/lib/defaults.js","./cancel/Cancel":"../../node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"../../node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"../../node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"../../node_modules/axios/lib/helpers/spread.js"}],"../../node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"../../node_modules/axios/lib/axios.js"}],"login.js":[function(require,module,exports) {
+},{"./lib/axios":"../../node_modules/axios/lib/axios.js"}],"alerts.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.showAlert = exports.hideAlert = void 0;
+
+var hideAlert = function hideAlert() {
+  var alertElement = document.querySelector('.alert');
+  if (alertElement) alertElement.parentElement.removeChild(alertElement);
+};
+
+exports.hideAlert = hideAlert;
+
+var showAlert = function showAlert(alertType, message) {
+  hideAlert();
+  var htmlMarkup = "<div class=\"alert alert--".concat(alertType, "\">").concat(message, "</div>");
+  document.querySelector('body').insertAdjacentHTML('afterbegin', htmlMarkup);
+  window.setTimeout(hideAlert, 5000);
+};
+
+exports.showAlert = showAlert;
+},{}],"login.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8348,6 +8371,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.handleLoginFormSubmit = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
+
+var _alerts = require("./alerts");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8365,7 +8390,8 @@ var handleLoginFormSubmit = /*#__PURE__*/function () {
             event.preventDefault();
             email = document.getElementById('email').value;
             password = document.getElementById('password').value;
-            _context.next = 5;
+            _context.prev = 3;
+            _context.next = 6;
             return (0, _axios.default)({
               method: 'POST',
               url: '/api/v1/users/login',
@@ -8375,16 +8401,30 @@ var handleLoginFormSubmit = /*#__PURE__*/function () {
               }
             });
 
-          case 5:
+          case 6:
             response = _context.sent;
-            console.log(response);
 
-          case 7:
+            if (response.data.status === 'success') {
+              (0, _alerts.showAlert)('success', 'Logged In Successfully');
+              window.setTimeout(function () {
+                return location.assign('/');
+              }, 1500);
+            }
+
+            _context.next = 13;
+            break;
+
+          case 10:
+            _context.prev = 10;
+            _context.t0 = _context["catch"](3);
+            (0, _alerts.showAlert)('error', _context.t0.response.data.message);
+
+          case 13:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee);
+    }, _callee, null, [[3, 10]]);
   }));
 
   return function handleLoginFormSubmit(_x) {
@@ -8393,7 +8433,7 @@ var handleLoginFormSubmit = /*#__PURE__*/function () {
 }();
 
 exports.handleLoginFormSubmit = handleLoginFormSubmit;
-},{"axios":"../../node_modules/axios/index.js"}],"mapbox.js":[function(require,module,exports) {
+},{"axios":"../../node_modules/axios/index.js","./alerts":"alerts.js"}],"mapbox.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
