@@ -8,8 +8,8 @@
     "start:dev": "nodemon --require dotenv/config server.js",
     "st": "nodemon server.js",
     "beforeStart": "export NODE_ENV=development",
-    "watchPublicFolderjs": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "buildPublicFolderjs": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "watchPublicFolderjs": "node ./node_modules/parcel-bundler/bin/cli.js watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "buildPublicFolderjs": "node ./node_modules/parcel-bundler/bin/cli.js watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "keywords": [],
   "author": "",
