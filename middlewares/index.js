@@ -12,6 +12,7 @@ const {authenticateUser, authorizeUser} = require('./auth');
 const {
     validateUserRequestBody,
     uploadUserPhoto,
+    resizeUserPhoto,
     doesUserExist,
     getCurrentUser
 } = require('./user');
@@ -24,9 +25,10 @@ module.exports = {
     filterRequestQueryObject,
     filterForTop5RatedTours,
     globalErrorHandler,
+    doesTourExist,
     validateUserRequestBody,
     uploadUserPhoto,
-    doesTourExist,
+    resizeUserPhoto,
     authenticateUser,
     authorizeUser,
     doesUserExist,
