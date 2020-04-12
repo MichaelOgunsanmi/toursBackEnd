@@ -5,6 +5,7 @@ const {
     authenticateUser,
     authorizeUser,
     validateUserRequestBody,
+    uploadUserPhoto,
     doesUserExist,
     getCurrentUser,
     filterRequestQueryObject
@@ -39,7 +40,7 @@ router.use(authenticateUser);
 
 router.patch('/updateMyPassword', validateUserRequestBody, updatePasswordController);
 router.get('/me', getCurrentUser, getSingleUserController);
-router.patch('/updateMe', validateUserRequestBody, updateUserController);
+router.patch('/updateMe', uploadUserPhoto, validateUserRequestBody, updateUserController);
 router.delete('/deleteMe', deleteUserController);
 
 router.use(authorizeUser('admin'));
