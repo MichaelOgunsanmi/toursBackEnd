@@ -8511,26 +8511,25 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var handleUpdateSettingsFormSubmit = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(event) {
-    var name, email, response;
+    var form, response;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             event.preventDefault();
-            name = document.getElementById('name').value;
-            email = document.getElementById('email').value;
-            _context.prev = 3;
-            _context.next = 6;
+            form = new FormData();
+            form.append('name', document.getElementById('name').value);
+            form.append('email', document.getElementById('email').value);
+            form.append('photo', document.getElementById('photo').files[0]);
+            _context.prev = 5;
+            _context.next = 8;
             return (0, _axios.default)({
               method: 'PATCH',
               url: '/api/v1/users/updateMe',
-              data: {
-                name: name,
-                email: email
-              }
+              data: form
             });
 
-          case 6:
+          case 8:
             response = _context.sent;
 
             if (response.data.status === 'success') {
@@ -8540,20 +8539,20 @@ var handleUpdateSettingsFormSubmit = /*#__PURE__*/function () {
               }, 1000);
             }
 
-            _context.next = 13;
+            _context.next = 15;
             break;
 
-          case 10:
-            _context.prev = 10;
-            _context.t0 = _context["catch"](3);
+          case 12:
+            _context.prev = 12;
+            _context.t0 = _context["catch"](5);
             (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-          case 13:
+          case 15:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[3, 10]]);
+    }, _callee, null, [[5, 12]]);
   }));
 
   return function handleUpdateSettingsFormSubmit(_x) {

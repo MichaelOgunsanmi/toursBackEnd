@@ -5,18 +5,16 @@ import {showAlert} from "./alerts";
 
 export const handleUpdateSettingsFormSubmit = async event => {
     event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-
+    const form = new FormData();
+    form.append('name', document.getElementById('name').value);
+    form.append('email', document.getElementById('email').value);
+    form.append('photo', document.getElementById('photo').files[0]);
 
     try {
         const response = await axios({
             method: 'PATCH',
             url: '/api/v1/users/updateMe',
-            data: {
-                name,
-                email
-            }
+            data: form
         });
 
         if (response.data.status === 'success') {
