@@ -5,7 +5,11 @@ const globalErrorHandler = require('./globalErrorHandler');
 
 const limiter = require('./rateLimit');
 
-const {doesTourExist} = require('./tour');
+const {
+    uploadTourPhoto,
+    resizeTourPhoto,
+    doesTourExist
+} = require('./tour');
 
 const {authenticateUser, authorizeUser} = require('./auth');
 
@@ -25,6 +29,8 @@ module.exports = {
     filterRequestQueryObject,
     filterForTop5RatedTours,
     globalErrorHandler,
+    uploadTourPhoto,
+    resizeTourPhoto,
     doesTourExist,
     validateUserRequestBody,
     uploadUserPhoto,

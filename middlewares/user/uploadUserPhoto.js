@@ -22,7 +22,7 @@ const multerFilter = (req, file, callback) => {
         message: `Invalid file type. Only images are allowed`
     });
 
-    callback(null, true)
+    callback(null, true);
 };
 
 const upload = multer({

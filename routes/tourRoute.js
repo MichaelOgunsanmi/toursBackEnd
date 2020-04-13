@@ -6,6 +6,8 @@ const {
     filterRequestQueryObject,
     filterForTop5RatedTours,
     doesTourExist,
+    uploadTourPhoto,
+    resizeTourPhoto,
     authenticateUser,
     authorizeUser
 } = require('../middlewares');
@@ -36,7 +38,7 @@ router.get('/distances/:latitudeLongitude/unit/:unit', getToursDistancesControll
 router
     .route('/:id')
     .get(getSingleTourController)
-    .patch(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist, updateTourController)
+    .patch(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist, uploadTourPhoto, resizeTourPhoto, updateTourController)
     .delete(authenticateUser, authorizeUser('admin', 'lead-guide'), doesTourExist ,deleteTourController);
 
 router
