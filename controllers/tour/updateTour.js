@@ -1,3 +1,5 @@
+const slugify = require('slugify');
+
 const {Tour, validateTourInputsFromUser} = require('../../models/Tours');
 
 const asyncWrapper = require('../../middlewares/asyncWrapper');
@@ -20,6 +22,7 @@ const updateTour = asyncWrapper(async (req, res, next) => {
         message: "Name already exist"
     });
 
+    if (req.body.name) req.body.slug = slugify(req.body.name, { lower: true });
 
     const tour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
         new: true,

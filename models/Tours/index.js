@@ -7,7 +7,6 @@ const {exampleStatic} = require('./statics');
 const {exampleMethod} = require('./methods');
 const {
     slugifyTourNamePreSave,
-    slugifyTourNamePreFindByIdAndModify,
     populateGuidesUserDetailsPreFind
 } = require('./pre');
 const {examplePost} = require('./post');
@@ -129,7 +128,6 @@ tourSchema.statics.exampleStatic = exampleStatic;
 tourSchema.methods.exampleMethod = exampleMethod;
 
 tourSchema.pre('save',  slugifyTourNamePreSave);
-tourSchema.pre(/^findOneAnd/,  slugifyTourNamePreFindByIdAndModify);
 tourSchema.pre(/^find/, populateGuidesUserDetailsPreFind);
 
 tourSchema.post('examplePost',  examplePost);
