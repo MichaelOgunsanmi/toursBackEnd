@@ -1,10 +1,10 @@
 const emailConfiguration = require('./emailConfiguration');
 
-const sendForgotPasswordEmail = async (user, passwordResetUrl) => {
-    const title = 'PASSWORD RESET';
-    const template = 'forgotPasswordEmail';
+const sendForgotPasswordEmail = async (user, url) => {
+    const title = 'Welcome';
+    const template = 'welcomeEmail';
 
-    await emailConfiguration(title, template, user, passwordResetUrl);
+    await emailConfiguration(title, template, user, url);
 
     // const text = `
     //     Hi ${user.name},
