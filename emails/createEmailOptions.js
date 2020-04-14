@@ -1,11 +1,11 @@
 
 const createEmailOptions = (to, subject, html, text) => {
     return {
-        from: `Michael Ogunsanmi <${process.env.EMAIL_FROM}>`,
+        from: `ogunsanmimichael@gs.com`,
         to,
         subject,
         html,
-        text
+        text,
     }
 };
 
