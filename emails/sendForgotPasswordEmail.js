@@ -1,4 +1,6 @@
 const transporter = require('./transporter');
+const createEmailHtmlAndTextFromPugTemplate = require('./createEmailHtmlAndTextFromPugTemplate');
+const createEmailOptions = require('./createEmailOptions');
 
 
 const sendForgotPasswordEmail = async (user, passwordResetUrl) => {
@@ -14,12 +16,11 @@ const sendForgotPasswordEmail = async (user, passwordResetUrl) => {
         Kindly ignore this mail if you didn't request for a password reset.
     `;
 
-    await transporter.sendMail({
-        from: 'Michael Ogunsanmi <ogunsanmimichael@gs.com>',
-        to: user.email,
-        subject,
-        text
-    })
+    const {html, text} = createEmailHtmlAndTextFromPugTemplate();
+
+    const mailOptions = createEmailOptions(user.email, subject, html, text);
+
+    await transporter.sendMail(mailOptions)
 };
 
 

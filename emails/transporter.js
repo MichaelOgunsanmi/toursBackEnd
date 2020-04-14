@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const transporter = nodemailer.createTransport({
+const developmentTransporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port: process.env.EMAIL_PORT,
     auth: {
@@ -8,5 +8,11 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASSWORD
     }
 });
+
+
+const productionTransporter = 'create';
+
+
+const transporter = process.env.NODE_ENV === 'production' ? productionTransporter : developmentTransporter;
 
 module.exports = transporter;
