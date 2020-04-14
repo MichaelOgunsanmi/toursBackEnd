@@ -4,7 +4,7 @@ const createEmailOptions = require('./createEmailOptions');
 
 
 const emailConfiguration = async (title, template, user, url) => {
-    const subject = `${title.toUpperCase()} | ${user.name.toUpperCase()}`;
+    const subject = `${title} | ${user.name.toUpperCase()}`;
 
     const {html, text} = createEmailHtmlAndTextFromPugTemplate(template, {
         subject,

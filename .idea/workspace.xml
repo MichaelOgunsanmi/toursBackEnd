@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/emails/emailConfiguration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emails/sendWelcomeEmail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/emails/baseEmail.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/emails/forgotPasswordEmail.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/auth/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth/signUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emails/createEmailOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/createEmailOptions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emails/sendForgotPasswordEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/sendForgotPasswordEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emails/sendWelcomeEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/sendWelcomeEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emails/transporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/transporter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/emails/baseEmail.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/emails/baseEmail.pug" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +99,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="101403000" />
+      <workItem from="1586191637488" duration="103121000" />
     </task>
     <servers />
   </component>

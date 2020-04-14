@@ -1,5 +1,6 @@
 const {User, validateUser} = require('../../models/Users');
 const {setJWTCookie} = require('../../cookies');
+const {sendWelcomeEmail} = require('../../emails');
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 const signUp = asyncWrapper(async (req, res, next) => {
@@ -29,6 +30,9 @@ const signUp = asyncWrapper(async (req, res, next) => {
 
     const createdUser = await newUser.save();
 
+    const createdUserProfileUrl = `${req.protocol}://${req.get('host')}/me`;
+    await sendWelcomeEmail(createdUser, createdUserProfileUrl);
+
     res.status(201).json({
         status: "success",
         token,
@@ -36,7 +40,6 @@ const signUp = asyncWrapper(async (req, res, next) => {
             user: createdUser
         }
     });
-
 });
 
 module.exports = signUp;
