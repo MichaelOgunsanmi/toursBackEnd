@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/routes/bookingRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emails/createEmailOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/createEmailOptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emails/emailConfiguration.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/emailConfiguration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emails/transporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/transporter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,17 +29,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/booking" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Sass/SCSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\booking" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\public\images" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\dev-data\public" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Reviews\methods" />
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Reviews" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\public" />
@@ -98,7 +95,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="116026000" />
+      <workItem from="1586191637488" duration="117115000" />
     </task>
     <servers />
   </component>

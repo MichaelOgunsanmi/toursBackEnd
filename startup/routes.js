@@ -9,6 +9,7 @@ const tourRoute = require('../routes/tourRoute');
 const userRoute = require('../routes/userRoute');
 const reviewRoute = require('../routes/reviewRoute');
 const viewRoute = require('../routes/viewRoute');
+const bookingRoute = require('../routes/bookingRoute');
 const error404Route = require('../routes/error404Route');
 
 //middlewares
@@ -42,7 +43,7 @@ module.exports = function (app) {
     app.use('/api/v1/tours', tourRoute);
     app.use('/api/v1/users', userRoute);
     app.use('/api/v1/reviews', reviewRoute);
-
+    app.use('/api/v1/bookings', bookingRoute);
 
     //register route handler for 404 requests
     app.use(error404Route);
