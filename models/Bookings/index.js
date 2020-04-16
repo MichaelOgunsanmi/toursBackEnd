@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 
-const {bookingStatic} = require('./statics');
-const {bookingMethod} = require('./methods');
-const {populateUserAndTourDetailsPreFind} = require('./pre');
-const {bookingPost} = require('./post');
+// const {bookingStatic} = require('./statics');
+// const {bookingMethod} = require('./methods');
+const {
+    populateTourDetailsPreFind,
+    populateUserDetailsPreFind
+} = require('./pre');
+// const {bookingPost} = require('./post');
 const {validateBooking} = require('./utils');
 
 const bookingSchema = new mongoose.Schema({
@@ -30,13 +33,14 @@ const bookingSchema = new mongoose.Schema({
     timestamps: true
 });
 
-bookingSchema.statics.bookingStatic = bookingStatic;
+// bookingSchema.statics.bookingStatic = bookingStatic;
+//
+// bookingSchema.methods.bookingMethod = bookingMethod;
 
-bookingSchema.methods.bookingMethod = bookingMethod;
+bookingSchema.pre(/^find/,  populateTourDetailsPreFind);
+bookingSchema.pre(/^find/,  populateUserDetailsPreFind);
 
-bookingSchema.pre(/^find/,  populateUserAndTourDetailsPreFind);
-
-bookingSchema.post('bookingPost',  bookingPost);
+// bookingSchema.post('bookingPost',  bookingPost);
 
 
 const Booking = mongoose.model('booking', bookingSchema);

@@ -1,7 +1,8 @@
-const populateUserAndTourDetailsPreFind = require('./populateUserAndTourDetailsPreFind');
-
+const populateUserDetailsPreFind = require('./populateUserDetailsPreFind');
+const populateTourDetailsPreFind = require('./populateTourDetailsPreFind');
 
 
 module.exports = {
-    populateUserAndTourDetailsPreFind
+    populateUserDetailsPreFind,
+    populateTourDetailsPreFind
 };
