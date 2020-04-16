@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/stripe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/methods/exampleMethod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/methods/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/post/examplePost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/post/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/pre/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/pre/populateUserAndTourDetailsPreFind.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/statics/exampleStatic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/statics/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Bookings/utils/validateBooking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tour.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/tour.pug" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,17 +38,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers/booking" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models/Bookings/pre" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Sass/SCSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Bookings\pre" />
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Bookings" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\controllers\booking" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\public\images" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\dev-data\public" />
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd" />
-      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\models\Reviews\methods" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Max Node\Projects\toursBackEnd\public" />
@@ -98,7 +104,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="126910000" />
+      <workItem from="1586191637488" duration="127754000" />
     </task>
     <servers />
   </component>
