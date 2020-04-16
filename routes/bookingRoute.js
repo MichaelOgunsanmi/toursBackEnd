@@ -2,16 +2,16 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    userIsLoggedIn,
+    doesTourExist,
     authenticateUser
-} = require('../middlewares/auth');
+} = require('../middlewares');
 
 const {
-    exampleController
+    getCheckoutSessionController
 } = require('../controllers/booking');
 
 
-
+router.get('/checkout-session/:tourId', doesTourExist, authenticateUser, getCheckoutSessionController);
 
 
 module.exports = router;

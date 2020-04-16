@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/bookingRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/booking/getCheckoutSession.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/booking/exampleController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/booking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/booking/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/tour/getAllTours.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/tour/getAllTours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emails/createEmailOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/createEmailOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/tour/doesTourExist.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/tour/doesTourExist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/bookingRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/bookingRoute.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +102,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="117115000" />
+      <workItem from="1586191637488" duration="122844000" />
     </task>
     <servers />
   </component>

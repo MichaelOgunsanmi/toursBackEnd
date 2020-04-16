@@ -1,7 +1,7 @@
-const exampleController = require('./exampleController');
+const getCheckoutSessionController = require('./getCheckoutSession');
 
 
 
 module.exports = {
-    exampleController
+    getCheckoutSessionController
 };

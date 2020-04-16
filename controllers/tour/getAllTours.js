@@ -4,8 +4,6 @@ const asyncWrapper = require('../../middlewares/asyncWrapper');
 
 
 const getAllTours = asyncWrapper( async (req, res, next) => {
-    console.log( req.query, req.queryParams, req.sortBy, req.select);
-
     if (req.query.page && req.skip >= await Tour.countDocuments()) return next({
             statusCode: 404,
             status: 'fail',

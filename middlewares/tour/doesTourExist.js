@@ -4,7 +4,9 @@ const asyncWrapper = require('../asyncWrapper');
 
 
 const doesTourExist = asyncWrapper(async (req, res, next) => {
-    const findTour = await Tour.findById(req.params.id);
+    const tourId = req.params.id || req.params.tourId;
+
+    const findTour = await Tour.findById(tourId);
 
     if (!findTour) return next({
         statusCode: 404,
