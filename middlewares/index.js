@@ -11,7 +11,11 @@ const {
     doesTourExist
 } = require('./tour');
 
-const {authenticateUser, authorizeUser} = require('./auth');
+const {
+    authenticateUser,
+    authorizeUser,
+    userIsLoggedIn
+} = require('./auth');
 
 const {
     validateUserRequestBody,
@@ -20,6 +24,10 @@ const {
     doesUserExist,
     getCurrentUser
 } = require('./user');
+
+const {
+    createBookingCheckout
+} = require('./booking');
 
 const exampleMiddleware = require('./exampleMiddleware');
 
@@ -37,8 +45,10 @@ module.exports = {
     resizeUserPhoto,
     authenticateUser,
     authorizeUser,
+    userIsLoggedIn,
     doesUserExist,
     getCurrentUser,
+    createBookingCheckout,
     limiter,
     exampleMiddleware
 };
