@@ -4,6 +4,7 @@ import {handleLogout} from './logout';
 import {handleUpdateSettingsFormSubmit} from "./updateSettings";
 import {handlePasswordUpdateFormSubmit} from "./updatePassword";
 import {displayMap} from './mapbox';
+import {handleBookTour} from "./stripe";
 
 
 const mapBox = document.getElementById('map');
@@ -13,9 +14,7 @@ if (mapBox) {
 }
 
 const form = document.querySelector('.form--login');
-if (form){
-    form.addEventListener('submit', handleLoginFormSubmit);
-}
+if (form) form.addEventListener('submit', handleLoginFormSubmit);
 
 
 const logoutButton = document.querySelector('.nav__el--logout');
@@ -28,3 +27,7 @@ if (updateUserButton) updateUserButton.addEventListener('submit', handleUpdateSe
 
 const updatePasswordButton = document.querySelector('.form-user-password');
 if (updatePasswordButton) updatePasswordButton.addEventListener('submit', handlePasswordUpdateFormSubmit);
+
+
+const bookTourButton = document.getElementById('book-tour');
+if (bookTourButton) bookTourButton.addEventListener('click', handleBookTour);
