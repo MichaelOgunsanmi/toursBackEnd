@@ -11,11 +11,13 @@ const {
     loginController,
     getSingleTourController,
     getToursOverviewController,
-    getUserAccountDetailsController
+    getUserAccountDetailsController,
+    getMyBookingsController
 } = require('../controllers/view');
 
 
 router.get('/me', authenticateUser, getUserAccountDetailsController);
+router.get('/bookings', authenticateUser, getMyBookingsController);
 
 router.use(userIsLoggedIn);
 router.get('/', createBookingCheckout, getToursOverviewController);

@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2792455c-4ea5-475c-90cc-46db6a836638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/booking/getAllBookings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/booking/createBookingCheckout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/booking/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Bookings/pre/populateTourDetailsPreFind.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/view/getMyBookings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/booking/getCheckoutSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/booking/getCheckoutSession.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/booking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/booking/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Bookings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Bookings/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Bookings/pre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Bookings/pre/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Bookings/pre/populateUserAndTourDetailsPreFind.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Bookings/pre/populateUserDetailsPreFind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/bookingRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/bookingRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/view/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/view/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/viewRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/viewRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/base.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/base.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tour.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/tour.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/account.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/account.pug" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +97,7 @@
       <workItem from="1584978903149" duration="7967000" />
       <workItem from="1585082446246" duration="56147000" />
       <workItem from="1585582926164" duration="77405000" />
-      <workItem from="1586191637488" duration="132234000" />
+      <workItem from="1586191637488" duration="134552000" />
     </task>
     <servers />
   </component>
