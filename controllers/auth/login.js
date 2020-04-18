@@ -15,6 +15,8 @@ const login = asyncWrapper(async (req, res, next) => {
 
     const token = await user.generateAuthToken();
 
+    console.log(token, 'token')
+
     setJWTCookie(token, res);
 
     res.status(200).json({

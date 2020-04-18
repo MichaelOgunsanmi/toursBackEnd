@@ -38,7 +38,7 @@ module.exports = function (app) {
             'difficulty',
             'price'
         ]}));
-    app.use(compression())
+    app.use(compression());
 
     //register routes
     app.use('/', viewRoute);
