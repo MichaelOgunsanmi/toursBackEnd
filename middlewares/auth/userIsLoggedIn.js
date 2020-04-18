@@ -11,7 +11,7 @@ const userIsLoggedIn = asyncWrapper(async (req, res, next) => {
 
     if (process.env.NODE_ENV === 'development'){
         jwtKey = "testing$In$Development"
-    }else if (process.env.NODE_eNV === 'production'){
+    }else if (process.env.NODE_ENV === 'production'){
         jwtKey = process.env.JWT_PRIVATE_KEY
     }
 
