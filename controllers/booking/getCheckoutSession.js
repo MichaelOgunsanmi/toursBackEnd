@@ -1,4 +1,4 @@
-const stripe = require('stripe')('sk_test_fnHdkinp2DqJ4zCBwsYFeg5R00KaaMGSmr' || process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const asyncWrapper = require('../../middlewares/asyncWrapper');
 

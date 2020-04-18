@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const compression = require('compression');
 
 //routes
 const tourRoute = require('../routes/tourRoute');
@@ -37,6 +38,7 @@ module.exports = function (app) {
             'difficulty',
             'price'
         ]}));
+    app.use(compression())
 
     //register routes
     app.use('/', viewRoute);

@@ -20,18 +20,6 @@ const winstonSetting = (filename) => {
 };
 
 
-// const dbConnection = () => {
-//     const dbLocal = process.env.DB_LOCAL;
-//     const dbAtlas = process.env.DB_ONLINE;
-//     const db = dbLocal || dbAtlas;
-//
-//     return {
-//         db,
-//         name: "logFile"
-//     }
-// };
-
-
 module.exports = function () {
 
     process.on('unhandledRejections', (ex) => {

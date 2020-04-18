@@ -2,7 +2,7 @@ const app = require('./app');
 const winston = require('winston');
 
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT;
 
 
 
