@@ -28,7 +28,7 @@ const updatePassword = asyncWrapper( async (req, res, next) => {
 
     const token = user.generateAuthToken();
 
-    setJWTCookie(token, res);
+    setJWTCookie(token, req, res);
 
     res.status(200).json({
         status: 'success',

@@ -1,14 +1,13 @@
 const {CONVERTDAYSTOMILLISECONDS} = require('../utils');
 
-const setJWTCookie = (token, res) => {
+const setJWTCookie = (token, req, res) => {
     const cookieOptions = {
         expires: new Date(
             Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * CONVERTDAYSTOMILLISECONDS
         ),
-        httpOnly: true
+        httpOnly: true,
+        secure: req.secure || req.headers['x-forwarded-proto'] === 'https'
     };
-
-    if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
 
     res.cookie('jwt', token, cookieOptions);
 };

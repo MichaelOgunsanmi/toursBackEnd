@@ -11,7 +11,7 @@ const generateAuthToken = function (){
         jwtKey = process.env.JWT_PRIVATE_KEY
     }
 
-    return jwt.sign({_id: user._id.toString()}, jwtKey, {expiresIn: "7d"});
+    return jwt.sign({_id: user._id.toString()}, jwtKey, {expiresIn: `${process.env.JWT_COOKIE_EXPIRES_IN}d`});
 };
 
 module.exports = generateAuthToken;

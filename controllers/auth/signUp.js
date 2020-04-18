@@ -26,7 +26,7 @@ const signUp = asyncWrapper(async (req, res, next) => {
 
     const token = newUser.generateAuthToken();
 
-    setJWTCookie(token, res);
+    setJWTCookie(token, req, res);
 
     const createdUser = await newUser.save();
 
