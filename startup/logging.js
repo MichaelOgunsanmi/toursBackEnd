@@ -22,7 +22,7 @@ const winstonSetting = (filename) => {
 
 module.exports = function () {
 
-    process.on('unhandledRejections', (ex) => {
+    process.on('unhandledRejection', (ex) => {
         server.close(() => {
             throw(ex)
         });
@@ -53,4 +53,10 @@ module.exports = function () {
         })
     );
 
+    process.on('SIGTERM', () => {
+        winston.info(`SIGTERM received, shutting down gracefully`);
+        server.close(() => {
+            winston.info(`Process terminated`);
+        });
+    });
 };
