@@ -44,7 +44,6 @@ module.exports = {
     userIsLoggedIn,
     doesUserExist,
     getCurrentUser,
-    createBookingCheckout,
     limiter,
     exampleMiddleware
 };
