@@ -5,7 +5,7 @@ import {handleUpdateSettingsFormSubmit} from "./updateSettings";
 import {handlePasswordUpdateFormSubmit} from "./updatePassword";
 import {displayMap} from './mapbox';
 import {handleBookTour} from "./stripe";
-
+import {showAlert} from "./alerts";
 
 const mapBox = document.getElementById('map');
 if (mapBox) {
@@ -31,3 +31,7 @@ if (updatePasswordButton) updatePasswordButton.addEventListener('submit', handle
 
 const bookTourButton = document.getElementById('book-tour');
 if (bookTourButton) bookTourButton.addEventListener('click', handleBookTour);
+
+
+const alertMessage = document.querySelector('body').dataset.alert;
+if (alertMessage) showAlert('success', alertMessage, 20);

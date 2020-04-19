@@ -7,6 +7,7 @@ const {
 } = require('../middlewares');
 
 const {
+    alertController,
     loginController,
     getSingleTourController,
     getToursOverviewController,
@@ -14,6 +15,8 @@ const {
     getMyBookingsController
 } = require('../controllers/view');
 
+
+router.use(alertController);
 
 router.get('/me', authenticateUser, getUserAccountDetailsController);
 router.get('/bookings', authenticateUser, getMyBookingsController);

@@ -10,7 +10,7 @@ const getCheckoutSession = asyncWrapper( async (req, res, next) => {
 
     const stripeCheckoutSession = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
-        success_url: `${req.protocol}://${req.get('host')}/bookings`,
+        success_url: `${req.protocol}://${req.get('host')}/bookings?alert=booking`,
         cancel_url: `${req.protocol}://${req.get('host')}/tour/${req.tour.slug}`,
         customer_email: req.user.email,
         client_reference_id: req.params.tourId,

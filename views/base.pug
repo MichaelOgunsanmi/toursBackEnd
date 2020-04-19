@@ -10,7 +10,7 @@ html(lang='en')
             script(src='/js/bundle.js' defer)
             link(rel='stylesheet' href='/css/style.css')
             title Tours | #{title}
-    body
+    body(data-alert=`${alert ? alert : ''}`)
         include _header
 
         block content

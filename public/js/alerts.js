@@ -1,3 +1,5 @@
+import {CONVERTSECONDSTOMILLISECONDS} from '../../utils'
+
 export const hideAlert = () => {
     const alertElement = document.querySelector('.alert');
 
@@ -5,12 +7,12 @@ export const hideAlert = () => {
 };
 
 
-export const showAlert = (alertType, message) => {
+export const showAlert = (alertType, message, timeInSeconds = 5) => {
     hideAlert();
 
     const htmlMarkup = `<div class="alert alert--${alertType}">${message}</div>`;
 
     document.querySelector('body').insertAdjacentHTML('afterbegin', htmlMarkup);
 
-    window.setTimeout(hideAlert, 5000)
+    window.setTimeout(hideAlert, timeInSeconds * CONVERTSECONDSTOMILLISECONDS);
 };
