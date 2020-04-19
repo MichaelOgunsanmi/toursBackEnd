@@ -11,6 +11,7 @@ const userRoute = require('../routes/userRoute');
 const reviewRoute = require('../routes/reviewRoute');
 const viewRoute = require('../routes/viewRoute');
 const bookingRoute = require('../routes/bookingRoute');
+const {webHookCheckoutController} = require('../controllers/booking');
 const error404Route = require('../routes/error404Route');
 
 //middlewares
@@ -24,6 +25,7 @@ const {
 module.exports = function (app) {
     //register middlewares for parse incoming requests
     app.use('/api', limiter);
+    app.post('/webhook-checkout', express.raw({type: 'application/json'}), webHookCheckoutController);
     app.use(express.json({ limit: '10kb' }));
     app.use(express.urlencoded({limit: '10kb', extended: true}));
     app.use(cookieParser());

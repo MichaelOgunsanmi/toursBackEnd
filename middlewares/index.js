@@ -25,10 +25,6 @@ const {
     getCurrentUser
 } = require('./user');
 
-const {
-    createBookingCheckout
-} = require('./booking');
-
 const exampleMiddleware = require('./exampleMiddleware');
 
 
