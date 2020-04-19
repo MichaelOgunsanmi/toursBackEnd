@@ -11,7 +11,7 @@ const server = app.listen(PORT, () => {
 });
 
 process.on('SIGTERM', () => {
-    winston.info(`SIGTERM received, shutting down gracefully lll`);
+    winston.info(`new deployment here`);
     server.close(() => {
         winston.info(`Process terminated lll`);
     });
