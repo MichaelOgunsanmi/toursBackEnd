@@ -10,4 +10,11 @@ const server = app.listen(PORT, () => {
     winston.info(`Listening on port ${PORT}...`);
 });
 
+process.on('SIGTERM', () => {
+    winston.info(`SIGTERM received, shutting down gracefully lll`);
+    server.close(() => {
+        winston.info(`Process terminated lll`);
+    });
+});
+
 module.exports = server;
